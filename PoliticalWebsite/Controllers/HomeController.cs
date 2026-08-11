@@ -82,6 +82,7 @@ namespace PoliticalWebsite.Controllers
                 }
                 model.lstSliderBanner = lst3;
             }
+            ViewBag.ShowNewYearModal = true;
             return View(model);
         }
 
@@ -302,6 +303,89 @@ namespace PoliticalWebsite.Controllers
                 model.lstNews = lst;
             }
             return View(model);
+        }
+
+        public ActionResult KushahariMahotsav()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ActionName("KushahariMahotsav")]
+        [OnAction(ButtonName = "btnSave")]
+        public ActionResult SaveKushahariMahotsav(Home obj)
+        {
+            try
+            {
+                DataSet ds = obj.SaveKushahariMahotsav();
+                if (ds != null && ds.Tables[0].Rows.Count > 0)
+                {
+                    if (ds.Tables[0].Rows[0][0].ToString() == "1")
+                    {
+                        TempData["KushahariMahotsav"] = "आपका विवरण सफलतापूर्वक सहेज लिया गया है !!";
+                    }
+                    else if (ds.Tables[0].Rows[0][0].ToString() == "0")
+                    {
+                        TempData["KushahariMahotsav"] = ds.Tables[0].Rows[0]["ErrorMessage"].ToString();
+                    }
+                }
+                else
+                {
+                    TempData["KushahariMahotsav"] = ds.Tables[0].Rows[0]["ErrorMessage"].ToString();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                TempData["KushahariMahotsav"] = ex.Message;
+            }
+            return RedirectToAction("KushahariMahotsav", "Home");
+        }
+
+        public ActionResult YouthConversation()
+        {
+            if (TempData["FormSubmitted"] == null)
+            {
+                ViewBag.ShowModal = true;
+            }
+            else
+            {
+                ViewBag.ShowModal = false;
+            }
+            return View();
+        }
+        [HttpPost]
+        [ActionName("YouthConversation")]
+        [OnAction(ButtonName = "btnSave")]
+        public ActionResult YouthConversation(YouthConversation model)
+        {
+            try
+            {
+                model.AddedBy = "1";
+                DataSet ds = model.SaveYouthConversation();
+                if (ds != null && ds.Tables[0].Rows.Count > 0)
+                {
+                    if (ds.Tables[0].Rows[0][0].ToString() == "1")
+                    {
+                        TempData["YouthConversation"] = "आपका युवा संवाद कार्यक्रम – पंजीकरण सफलतापूर्वक सहेज लिया गया है !!";
+                    }
+                    else if (ds.Tables[0].Rows[0][0].ToString() == "0")
+                    {
+                        TempData["YouthConversation"] = ds.Tables[0].Rows[0]["ErrorMessage"].ToString();
+                    }
+                }
+                else
+                {
+                    TempData["YouthConversation"] = ds.Tables[0].Rows[0]["ErrorMessage"].ToString();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                TempData["YouthConversation"] = ex.Message;
+            }
+            TempData["FormSubmitted"] = true;
+            return RedirectToAction("YouthConversation", "Home");
         }
     }
 }

@@ -1,0 +1,204 @@
+﻿@model PoliticalWebsite.Models.Home
+
+@{
+    ViewBag.Title = "KushahariMahotsav";
+    Layout = "~/Views/Shared/WebsiteLayout.cshtml";
+}
+
+
+@using (Html.BeginForm("KushahariMahotsav", "Home", FormMethod.Post, new { @id = "form1", enctype = "multipart/form-data" }))
+{
+    <div class="page-wrapper">
+        <section class="page-header-hi" style="background-image: url('/images/mahotsav.jpg');">
+            @*<section class="page-header-hi" style="background-image: url('/images/ab_bg.jpg');">*@
+                <div class="container">
+                    <div class="pbmit-title-bar-content visually-hidden">
+                        <div class="pbmit-title-bar-content-inner">
+                            <div class="pbmit-tbar">
+                                <div class="pbmit-tbar-inner container">
+                                    <h1 class="pbmit-tbar-title">कुशहरी महोत्सव</h1>
+                                </div>
+                            </div>
+                            <div class="pbmit-breadcrumb pt-2">
+                                <div class="pbmit-breadcrumb-inner">
+                                    <span><a title="" href="index.html" class="home"><span>होम</span></a></span>
+                                    <span class="sep"><i class="pbmit-base-icon-angle-double-right"></i></span>
+                                    <span><span class="post-root post post-post current-item"> कुशहरी महोत्सव</span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="page-content py-5">
+                <section class="section-pagee contact-section">
+                    <div class="container">
+                        <div class="row g-0 justify-content-center">
+
+                            <div class="col-md-8 shadow p-4">
+                                <div class="KushahariMahotsav">
+                                    <div class="row mb-3 g-3">
+                                        <div class="col-lg-12 col-sm-12 text-center">
+                                            <h4 class="border-bottom pb-2" style="color:#f58321;">कुशहरी महोत्सव से जुड़े </h4>
+                                        </div>
+
+                                        <span style="color:red">@TempData["KushahariMahotsav"]</span>
+
+                                        <!-- Name -->
+                                        <div class="col-lg-6 col-sm-6">
+                                            <label for="Name" class="form-label">नाम <span style="color:red">*</span></label>
+                                            @Html.TextBoxFor(m => m.Name, new { @class = "form-control", @Placeholder = "नाम" })
+                                        </div>
+
+                                        <!-- Father's Name -->
+                                        <div class="col-lg-6 col-sm-6">
+                                            <label for="FatherName" class="form-label">पिता का नाम <span style="color:red">*</span></label>
+                                            @Html.TextBoxFor(m => m.FatherName, new { @class = "form-control", @Placeholder = "पिता का नाम" })
+                                        </div>
+
+                                        <!-- Mobile -->
+                                        <div class="col-lg-6 col-sm-6">
+                                            <label for="Mobile" class="form-label">मोबाइल नम्बर <span style="color:red">*</span></label>
+                                            @Html.TextBoxFor(m => m.Mobile, new { @class = "form-control", @Placeholder = "फोन नं.", @onkeypress = "return isNumberOrDecimal(event);", @maxlength = "10" })
+                                        </div>
+
+                                        <!-- Whatsapp -->
+                                        <div class="col-lg-6 col-sm-6">
+                                            <label for="WhatsappNo" class="form-label">वाट्सएप नम्बर</label>
+                                            @Html.TextBoxFor(m => m.WhatsappNo, new { @class = "form-control", @Placeholder = "वाट्सएप नं.", @onkeypress = "return isNumberOrDecimal(event);", @maxlength = "10" })
+                                        </div>
+
+                                        <!-- Email -->
+                                        <div class="col-lg-6 col-sm-6">
+                                            <label for="Email" class="form-label">ईमेल</label>
+                                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @Placeholder = "ईमेल" })
+                                        </div>
+
+                                        <!-- Subject -->
+                                        <div class="col-lg-6 col-sm-6">
+                                            <label for="Subject" class="form-label">वर्तमान कार्य</label>
+                                            @Html.TextBoxFor(m => m.Subject, new { @class = "form-control", @Placeholder = "वर्तमान कार्य" })
+                                        </div>
+
+                                        <!-- State -->
+                                        <div class="col-lg-6 col-sm-6">
+                                            <label for="State" class="form-label">वर्तमान राज्य <span style="color:red">*</span></label>
+                                            @Html.TextBoxFor(m => m.State, new { @class = "form-control", @Placeholder = "वर्तमान राज्य" })
+                                        </div>
+
+                                        <!-- Address -->
+                                        <div class="col-lg-12 col-sm-12">
+                                            <label for="Address" class="form-label">वर्तमान पता <span style="color:red">*</span></label>
+                                            @Html.TextAreaFor(m => m.Address, new { @class = "form-control", @Placeholder = "वर्तमान पता", @rows = "2", @style = "height:100px;" })
+                                        </div>
+
+                                        <!-- Message -->
+                                        <div class="col-lg-12 col-sm-12">
+                                            <label for="Message" class="form-label"> सुझाव/विचार</label>
+                                            @Html.TextAreaFor(m => m.Message, new { @class = "form-control", @Placeholder = "सुझाव/विचार", @rows = "4", @style = "height:200px;" })
+                                        </div>
+
+                                        <!-- Submit -->
+                                        <div class="col-lg-12 col-sm-12 text-center">
+                                            <input class="pbmit-btn pbmit-btn-global pbmit-btn-hover-secondary"
+                                                   type="submit"
+                                                   onclick="return validateform();"
+                                                   value="SUBMIT"
+                                                   id="btnSave"
+                                                   name="btnSave" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+</div>
+}
+
+
+
+<script src="~/files/bower_components/jquery/js/jquery.min.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css">
+<script>
+    function validateform() {
+        $("#divload").css({ 'display': 'none' });
+        $(".errortext").removeClass("errortext");
+        if ($('#Name').val() == '') {
+            $("#Name").addClass('errortext');
+            $('#Name').focus();
+            return false;
+        }
+        if ($('#FatherName').val() == '') {
+            $("#FatherName").addClass('errortext');
+            $('#FatherName').focus();
+            return false;
+        }
+        if ($('#Mobile').val() == '') {
+            $("#Mobile").addClass('errortext');
+            $('#Mobile').focus();
+            return false;
+        }
+        //if ($('#WhatsappNo').val() == '') {
+        //    $("#WhatsappNo").addClass('errortext');
+        //    $('#WhatsappNo').focus();
+        //    return false;
+        //}
+        //if ($('#Email').val() == '') {
+        //    $("#Email").addClass('errortext');
+        //    $('#Email').focus();
+        //    return false;
+        //}
+        //if ($('#Subject').val() == '') {
+        //    $("#Subject").addClass('errortext');
+        //    $('#Subject').focus();
+        //    return false;
+        //}
+        if ($('#State').val() == '') {
+            $("#State").addClass('errortext');
+            $('#State').focus();
+            return false;
+        }
+        if ($('#Address').val() == '') {
+            $("#Address").addClass('errortext');
+            $('#Address').focus();
+            return false;
+        }
+        //if ($('#Message').val() == '') {
+        //    $("#Message").addClass('errortext');
+        //    $('#Message').focus();
+        //    return false;
+        //}
+        $("#divload").css({ 'display': '' });
+        return true;
+    }
+
+    function isNumberOrDecimal(evt) {
+        var charCode = (evt.which) ? evt.which : evt.keyCode;
+        if (charCode != 46 && charCode > 31
+            && (charCode < 48 || charCode > 57))
+            return false;
+        return true;
+    }
+</script>
+
+<style>
+        .errortext {
+            border: 1px solid red !important;
+            background-color: #fff0f0 !important;
+        }
+        /* .section-pagee{
+            padding:40px;
+        }
+        @@media (max-width: 767px) {
+            .KushahariMahotsav {
+                 margin: 30px 0px 0px 0px;
+                padding: 15px 15px 10px 15px;
+            }
+    } */
+
+</style>
+
