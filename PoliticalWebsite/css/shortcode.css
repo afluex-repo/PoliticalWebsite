@@ -1189,25 +1189,26 @@ div#clock span:first-child {
 .pbmit-portfolio-style-1 .pbminfotech-icon-box a>i:before{
     font-weight: 700;
 }
-.pbmit-portfolio-style-1 .pbminfotech-icon-box a{
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    right: 20px;
-    top: 40px;
-    font-size: 16px;
-    line-height: 50px;
-    color: #fff;
-    background-color: var(--pbmit-global-color);
-    display: inline-block;
-    text-align: center;
-    z-index: 2;
-    visibility: hidden;
-    opacity: 0;
-    transition: all ease 800ms;
-    -moz-transition: all ease 800ms;
-    -webkit-transition: all ease 800ms;
-}
+    .pbmit-portfolio-style-1 .pbminfotech-icon-box a {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        left: 50%; /* Move to center horizontally */
+        top: 50%; /* Move to center vertically */
+        transform: translate(-50%, -50%); /* Adjust for exact centering */
+        font-size: 16px;
+        line-height: 50px;
+        color: #fff;
+        background-color: var(--pbmit-global-color);
+        display: inline-block;
+        text-align: center;
+        z-index: 2;
+        visibility: hidden;
+        opacity: 0;
+        transition: all ease 800ms;
+        -moz-transition: all ease 800ms;
+        -webkit-transition: all ease 800ms;
+    }
 .pbmit-portfolio-style-1:hover .pbminfotech-icon-box a{
     visibility: visible;
     opacity: 1;

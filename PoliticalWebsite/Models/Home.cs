@@ -10,6 +10,10 @@ namespace PoliticalWebsite.Models
     public class Home
     {
         public string AddedBy { get; set; }
+        public string FatherName { get; set; }
+        public string Address { get; set; }
+        public string State { get; set; }
+        public string WhatsappNo { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
         public string Mobile { get; set; }
@@ -72,6 +76,22 @@ namespace PoliticalWebsite.Models
                      new SqlParameter("@AddedBy",AddedBy)
             };
             DataSet ds = Connection.ExecuteQuery("SaveContactDetails", para);
+            return ds;
+        }
+        public DataSet SaveKushahariMahotsav()
+        {
+            SqlParameter[] para = {
+                new SqlParameter("@Name",Name),
+                new SqlParameter("@FatherName",FatherName),
+                new SqlParameter("@Email",string.IsNullOrEmpty(Email) ? (object)DBNull.Value : Email),
+                new SqlParameter("@Mobile",Mobile),
+                new SqlParameter("@WhatsappNo",string.IsNullOrEmpty(WhatsappNo) ? (object)DBNull.Value : WhatsappNo),
+                new SqlParameter("@Message",string.IsNullOrEmpty(Message) ? (object)DBNull.Value : Message),
+                new SqlParameter("@Subject",string.IsNullOrEmpty(Subject) ? (object)DBNull.Value : Subject),
+                new SqlParameter("@Address",Address),
+                new SqlParameter("@State",State)
+            };
+            DataSet ds = Connection.ExecuteQuery("InsertKushahariMahotsav", para);
             return ds;
         }
 

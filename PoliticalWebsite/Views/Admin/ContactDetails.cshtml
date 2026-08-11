@@ -1,10 +1,19 @@
 ﻿@model PoliticalWebsite.Models.Admin
 
 @{
-    
+
     ViewBag.Title = "ContactDetails";
     Layout = "~/Views/Shared/Admin_LayoutPage.cshtml";
 }
+<style>
+    div.dataTables_wrapper div.dataTables_length label {
+        margin-right: 5px !important;
+    }
+</style>
+
+<!-- ✅ DataTables CSS -->
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" />
+<link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.dataTables.min.css" />
 
 <form action="/Admin/ContactDetails" id="form1" method="post">
     <div class="pcoded-inner-content">
@@ -20,7 +29,7 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="dt-responsive table-responsive">
-                                        <table id="order-listing" class="table table-striped table-bordered">
+                                        <table id="example" class="table table-striped table-bordered">
                                             <thead>
                                                 <tr>
                                                     <th>S No.</th>
@@ -66,4 +75,58 @@
     </div>
 </form>
 
+
+
+<!-- ✅ jQuery -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<!-- ✅ DataTables JS -->
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+<!-- ✅ Buttons JS -->
+<script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
+
+<!-- ✅ Export dependencies -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+
+<!-- ✅ Initialize DataTable with buttons -->
+
+<script>
+    $(document).ready(function () {
+        var table = $('#example').DataTable({
+            responsive: true,
+            dom: `
+            <'row mb-3'
+                <'col-12 col-md-6 d-flex flex-wrap align-items-center'l B>
+                <'col-12 col-md-6 d-flex justify-content-md-end justify-content-start mt-2 mt-md-0'f>
+            >
+            rtip
+        `,
+            pageLength: 10,
+            lengthMenu: [[5, 10, 25, 50, -1], [5, 10, 25, 50, "All"]],
+            language: {
+                search: "Search:",
+                lengthMenu: "Show _MENU_ entries per page",
+                info: "Showing _START_ to _END_ of _TOTAL_ entries",
+                paginate: {
+                    previous: "Previous",
+                    next: "Next"
+                }
+            },
+            buttons: [
+                { extend: 'copy', className: 'btn btn-secondary btn-sm me-1 mb-1' },
+                { extend: 'excel', className: 'btn btn-success btn-sm me-1 mb-1' },
+                { extend: 'csv', className: 'btn btn-info btn-sm me-1 mb-1' },
+                { extend: 'pdf', className: 'btn btn-danger btn-sm me-1 mb-1' },
+                { extend: 'print', className: 'btn btn-primary btn-sm mb-1' }
+            ],
+        });
+
+        $('.dataTables_length').css('display', 'block').show();
+    });
+</script>
 

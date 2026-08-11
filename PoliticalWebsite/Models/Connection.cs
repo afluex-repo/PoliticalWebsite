@@ -17,7 +17,8 @@ namespace PoliticalWebsite.Models
         {
             try
             {
-                connectionString = "Data Source=103.48.51.111,1232;Initial Catalog=PoliticalWebsiteDB; User Id=PoliticalWebsiteUser; Password=Political123!@#; Integrated Security=false;";
+                //connectionString = "Data Source=103.48.51.111,1232;Initial Catalog=PoliticalWebsiteDB; User Id=PoliticalWebsiteUser; Password=Political123!@#; Integrated Security=false;";
+                connectionString = "Data Source=101.53.150.222,53389;Initial Catalog=PoliticalWebsiteDB; User Id=sa; Password=J2q+NETi78M; Integrated Security=false;";
             }
             catch (Exception)
             {

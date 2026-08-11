@@ -15,7 +15,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PoliticalWebsite</RootNamespace>
     <AssemblyName>PoliticalWebsite</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -24,6 +24,8 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -77,6 +79,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -84,16 +87,14 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Web.Razor">
@@ -507,6 +508,7 @@
     <Content Include="images\history\histroy03.jpg" />
     <Content Include="images\logo-icon.png" />
     <Content Include="images\logo.png" />
+    <Content Include="images\newYear.jpeg" />
     <Content Include="images\project\portfolio-02.jpg" />
     <Content Include="images\project\portfolio-03.jpg" />
     <Content Include="images\project\portfolio-04.jpg" />
@@ -562,6 +564,7 @@
     <Content Include="images\services\service09.jpg" />
     <Content Include="images\services\service09s.jpg" />
     <Content Include="images\services\service1.jpg" />
+    <Content Include="images\youva_samvad.jpg" />
     <Content Include="js\aos.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\circle-progress.js" />
@@ -870,6 +873,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\YouthConversation.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Common.cs" />
     <Compile Include="Models\Connection.cs" />
@@ -909,6 +913,10 @@
     <Content Include="Views\Master\AddSliderBanner.cshtml" />
     <Content Include="Views\Master\SliderBannerList.cshtml" />
     <Content Include="Views\Master\ChangePassword.cshtml" />
+    <Content Include="Views\Home\KushahariMahotsav.cshtml" />
+    <Content Include="Views\Admin\KushahariMahotsavDetails.cshtml" />
+    <Content Include="Views\Home\YouthConversation.cshtml" />
+    <Content Include="Views\Admin\YouthConversationDetails.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
