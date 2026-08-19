@@ -27,11 +27,18 @@ namespace PoliticalWebsite.Controllers
                     obj.Discription = r["Discription"].ToString();
                     lst.Add(obj);
                 }
+                
+                
+                
                 model.lstgallery = lst;
             }
 
             List<Home> lst1 = new List<Home>();
             DataSet ds1 = model.EventimageList();
+
+
+
+
 
             if (ds1 != null && ds1.Tables.Count > 0 && ds1.Tables[0].Rows.Count > 0)
             {
@@ -170,14 +177,25 @@ namespace PoliticalWebsite.Controllers
             return View(model);
         }
 
+        public ActionResult ContactOld()
+        {
+            return View();
+        }
         public ActionResult Contact()
         {
             return View();
         }
 
+
+
+
+
+
+
         [HttpPost]
         [ActionName("Contact")]
-        [OnAction(ButtonName = "btnSave")]
+       // [OnAction(ButtonName = "btnSave")]
+        [ValidateAntiForgeryToken]
         public ActionResult ContactUs(Home obj)
         {
             try
@@ -251,9 +269,65 @@ namespace PoliticalWebsite.Controllers
             return View(model);
         }
 
+        //public ActionResult NewsPressRelease(Home model)
+        //{
+        //    List<Home> lst = new List<Home>();
+        //    DataSet ds = model.NewsimageList();
+
+        //    if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+        //    {
+        //        foreach (DataRow r in ds.Tables[0].Rows)
+        //        {
+        //            Home obj = new Home();
+        //            obj.Pk_NewsId = r["Pk_NewsId"].ToString();
+        //            obj.NewsImage = r["NewsImage"].ToString();
+        //            obj.Discription = r["Discription"].ToString();
+        //            obj.Message = r["Message"].ToString();
+        //            obj.Date = r["Date"].ToString();
+        //            lst.Add(obj);
+        //        }
+        //        model.lstNews = lst;
+        //    }
+        //    if (ds != null && ds.Tables.Count > 0 && ds.Tables[1].Rows.Count > 0)
+        //    {
+        //        foreach (DataRow r in ds.Tables[1].Rows)
+        //        {
+        //            Home obj = new Home();
+        //            obj.Pk_NewsId = r["Pk_NewsId"].ToString();
+        //            ViewBag.TopMainNewsImage = r["NewsImage"].ToString();
+        //            ViewBag.TopMainDiscription = r["Discription"].ToString();
+        //            ViewBag.TopMessage = r["Message"].ToString();
+        //            ViewBag.TopDate = r["Date"].ToString();
+        //            ViewBag.Month = r["Month"].ToString();
+        //            ViewBag.Day = r["Day"].ToString();
+        //            lst.Add(obj);
+        //        }
+        //        model.lstNews = lst;
+        //    }
+        //    if (ds != null && ds.Tables.Count > 0 && ds.Tables[2].Rows.Count > 0)
+        //    {
+        //        foreach (DataRow r in ds.Tables[2].Rows)
+        //        {
+        //            Home obj = new Home();
+        //            obj.Pk_NewsId = r["Pk_NewsId"].ToString();
+        //            ViewBag.MainNewsImage = r["NewsImage"].ToString();
+        //            ViewBag.MainDiscription = r["Discription"].ToString();
+        //            ViewBag.MainMessage = r["Message"].ToString();
+        //            ViewBag.MainDate = r["Date"].ToString();
+        //            ViewBag.MainMonth = r["Month"].ToString();
+        //            ViewBag.MainDay = r["Day"].ToString();
+        //            lst.Add(obj);
+        //        }
+        //        model.lstNews = lst;
+        //    }
+        //    return View(model);
+        //}
+
+
         public ActionResult NewsPressRelease(Home model)
         {
             List<Home> lst = new List<Home>();
+
             DataSet ds = model.NewsimageList();
 
             if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
@@ -261,47 +335,20 @@ namespace PoliticalWebsite.Controllers
                 foreach (DataRow r in ds.Tables[0].Rows)
                 {
                     Home obj = new Home();
+
                     obj.Pk_NewsId = r["Pk_NewsId"].ToString();
                     obj.NewsImage = r["NewsImage"].ToString();
                     obj.Discription = r["Discription"].ToString();
                     obj.Message = r["Message"].ToString();
                     obj.Date = r["Date"].ToString();
+                    obj.Year = r["Year"].ToString();
+
                     lst.Add(obj);
                 }
-                model.lstNews = lst;
             }
-            if (ds != null && ds.Tables.Count > 0 && ds.Tables[1].Rows.Count > 0)
-            {
-                foreach (DataRow r in ds.Tables[1].Rows)
-                {
-                    Home obj = new Home();
-                    obj.Pk_NewsId = r["Pk_NewsId"].ToString();
-                    ViewBag.TopMainNewsImage = r["NewsImage"].ToString();
-                    ViewBag.TopMainDiscription = r["Discription"].ToString();
-                    ViewBag.TopMessage = r["Message"].ToString();
-                    ViewBag.TopDate = r["Date"].ToString();
-                    ViewBag.Month = r["Month"].ToString();
-                    ViewBag.Day = r["Day"].ToString();
-                    lst.Add(obj);
-                }
-                model.lstNews = lst;
-            }
-            if (ds != null && ds.Tables.Count > 0 && ds.Tables[2].Rows.Count > 0)
-            {
-                foreach (DataRow r in ds.Tables[2].Rows)
-                {
-                    Home obj = new Home();
-                    obj.Pk_NewsId = r["Pk_NewsId"].ToString();
-                    ViewBag.MainNewsImage = r["NewsImage"].ToString();
-                    ViewBag.MainDiscription = r["Discription"].ToString();
-                    ViewBag.MainMessage = r["Message"].ToString();
-                    ViewBag.MainDate = r["Date"].ToString();
-                    ViewBag.MainMonth = r["Month"].ToString();
-                    ViewBag.MainDay = r["Day"].ToString();
-                    lst.Add(obj);
-                }
-                model.lstNews = lst;
-            }
+
+            model.lstNews = lst;
+
             return View(model);
         }
 
@@ -354,38 +401,84 @@ namespace PoliticalWebsite.Controllers
             }
             return View();
         }
+
         [HttpPost]
         [ActionName("YouthConversation")]
-        [OnAction(ButtonName = "btnSave")]
+     
+        //public ActionResult YouthConversation(YouthConversation model)
+        //{
+        //    try
+        //    {
+        //        model.AddedBy = "1";
+        //        DataSet ds = model.SaveYouthConversation();
+        //        if (ds != null && ds.Tables[0].Rows.Count > 0)
+        //        {
+        //            if (ds.Tables[0].Rows[0][0].ToString() == "1")
+        //            {
+        //                TempData["YouthConversation"] = "आपका युवा संवाद कार्यक्रम – पंजीकरण सफलतापूर्वक सहेज लिया गया है !!";
+        //            }
+        //            else if (ds.Tables[0].Rows[0][0].ToString() == "0")
+        //            {
+        //                TempData["YouthConversation"] = ds.Tables[0].Rows[0]["ErrorMessage"].ToString();
+        //            }
+        //        }
+        //        else
+        //        {
+        //            TempData["YouthConversation"] = ds.Tables[0].Rows[0]["ErrorMessage"].ToString();
+        //        }
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        TempData["YouthConversation"] = ex.Message;
+        //    }
+        //    TempData["FormSubmitted"] = true;
+        //    return RedirectToAction("YouthConversation", "Home");
+        //}
+
         public ActionResult YouthConversation(YouthConversation model)
         {
             try
             {
                 model.AddedBy = "1";
+
                 DataSet ds = model.SaveYouthConversation();
-                if (ds != null && ds.Tables[0].Rows.Count > 0)
+
+                if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
                 {
+                   
+
                     if (ds.Tables[0].Rows[0][0].ToString() == "1")
                     {
-                        TempData["YouthConversation"] = "आपका युवा संवाद कार्यक्रम – पंजीकरण सफलतापूर्वक सहेज लिया गया है !!";
+                        TempData["YouthConversation"] =
+                            "आपका युवा संवाद कार्यक्रम – पंजीकरण सफलतापूर्वक सहेज लिया गया है !!";
+
+                        TempData["MessageType"] = "success";
                     }
-                    else if (ds.Tables[0].Rows[0][0].ToString() == "0")
+                    else
                     {
-                        TempData["YouthConversation"] = ds.Tables[0].Rows[0]["ErrorMessage"].ToString();
+                        TempData["YouthConversation"] =
+                            ds.Tables[0].Rows[0]["ErrorMessage"].ToString();
+
+                        TempData["MessageType"] = "danger";
                     }
                 }
                 else
                 {
-                    TempData["YouthConversation"] = ds.Tables[0].Rows[0]["ErrorMessage"].ToString();
+                    TempData["YouthConversation"] =
+                        "कुछ समस्या हुई। कृपया पुनः प्रयास करें।";
+                    TempData["MessageType"] = "danger";
                 }
-
             }
             catch (Exception ex)
             {
                 TempData["YouthConversation"] = ex.Message;
             }
+
             TempData["FormSubmitted"] = true;
+
             return RedirectToAction("YouthConversation", "Home");
         }
+
     }
 }

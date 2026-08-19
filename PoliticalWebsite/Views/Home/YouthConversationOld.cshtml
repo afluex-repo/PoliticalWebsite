@@ -1,0 +1,372 @@
+﻿@model PoliticalWebsite.Models.YouthConversation
+
+@{
+    ViewBag.Title = "YouthConversation";
+    Layout = "~/Views/Shared/WebsiteLayout.cshtml";
+}
+<style>
+    .form-control {
+        padding: 8px 14px 0px 20px;
+    }
+
+    .errortext {
+        border: 1px solid red !important;
+        background-color: #fff0f0 !important;
+    }
+    .footer.site-footer{
+        display:none;
+    }
+</style>
+@using (Html.BeginForm("YouthConversation", "Home", FormMethod.Post, new { @id = "form1", enctype = "multipart/form-data" }))
+{
+    <!-- Page Wrapper -->
+    <div class="page-wrapper">
+        <section class="page-header-hi" style="background-image: url('/images/ab_bg.jpg');">
+            <div class="container">
+                <div class="pbmit-title-bar-content">
+                    <div class="pbmit-title-bar-content-inner">
+                        <div class="pbmit-tbar">
+                            <div class="pbmit-tbar-inner container">
+                                <h1 class="pbmit-tbar-title">युवा संवाद कार्यक्रम</h1>
+                            </div>
+                        </div>
+                        <div class="pbmit-breadcrumb">
+                            <div class="pbmit-breadcrumb-inner">
+                                <span><a href="/Home/Index" class="home"><span>होम</span></a></span>
+                                <span class="sep"><i class="pbmit-base-icon-angle-double-right"></i></span>
+                                <span>
+                                    <span class="post-root post post-post current-item">
+                                        युवा संवाद कार्यक्रम
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="page-content">
+            <section class="section-lgt contact-section">
+                <section class="contact-section-bg">
+                    <div class="container">
+
+                        <div class="row g-0">
+                            <div class="col-md-12 text-center">
+                                <div class="pbmit-heading-subheading">
+                                    <h3 class="pbmit-title border-bottom">
+                                        📄 युवा संवाद कार्यक्रम – पंजीकरण फॉर्म (Registration Form)
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row g-0">
+                            <!-- Form -->
+                            <div class="col-md-7">
+                                <div class="contact-form p-4 mb-5 bg-white rounded shadow">
+                                    <div class="row g-3">
+                                        <span class="text-danger">@TempData["YouthConversation"]</span>
+                                        <!-- पूरा नाम -->
+                                        <div class="col-md-6">
+                                            @Html.TextBoxFor(m => m.FullName, new
+                                            {
+                                                @class = "form-control",
+                                                @placeholder = "पूरा नाम (Full Name)"
+                                            })
+                                        </div>
+
+                                        <!-- पिता / अभिभावक -->
+                                        <div class="col-md-6">
+                                            @Html.TextBoxFor(m => m.FatherName, new
+                                            {
+                                                @class = "form-control",
+                                                @placeholder = "पिता / अभिभावक का नाम (Father / Guardian Name)"
+                                            })
+                                        </div>
+
+                                        <!-- आयु -->
+                                        <div class="col-md-6">
+                                            @Html.TextBoxFor(m => m.Age, new
+                                       { @class = "form-control", @placeholder = "आयु (Age)", @onkeypress = "return isNumberOrDecimal(event);", })
+                                        </div>
+
+                                        <!-- मोबाइल -->
+                                        <div class="col-md-6">
+                                            @Html.TextBoxFor(m => m.MobileNo, new
+                                       {
+                                           @class = "form-control",
+                                                @placeholder = "मोबाइल नंबर (Mobile No)",
+                                                @onkeypress = "return isNumberOrDecimal(event);",
+                                                @maxlength = "10"
+                                       })
+                                        </div>
+
+                                        <!-- ईमेल -->
+                                        <div class="col-md-12">
+                                            @Html.TextBoxFor(m => m.Email, new
+                                            {
+                                                @class = "form-control",
+                                                @placeholder = "ईमेल (Email - Optional)",
+                                                @type = "email"
+                                            })
+                                        </div>
+
+                                        <!-- पता -->
+                                        <div class="col-md-12">
+                                            @Html.TextBoxFor(m => m.Address, new
+                                            {
+                                                @class = "form-control",
+                                                @placeholder = "स्थानीय पता / गांव / वार्ड नाम (Local Address)"
+                                            })
+                                        </div>
+
+                                        <!-- संस्थान -->
+                                        <div class="col-md-12">
+                                            @Html.TextBoxFor(m => m.InstituteName, new { @class = "form-control", @placeholder = "विद्यालय / कॉलेज / संस्थान का नाम (School / College / Institute)" })
+                                        </div>
+
+                                        <!-- कक्षा / कोर्स -->
+                                        <div class="col-md-12">
+                                            @Html.TextBoxFor(m => m.Course, new { @class = "form-control", @placeholder = "कक्षा / कोर्स (Class / Course)" })
+                                        </div>
+
+                                        <!-- Submit -->
+                                        <div class="col-12 text-center mt-4">
+                                            <input type="submit" value="Submit" class="btn pbmit-btn py-2 pt-3" onclick="return validateform();" id="btnSave" name="btnSave" />
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Image -->
+                            <div class="col-md-5">
+                                <div class="shadow">
+                                    <img src="~/images/youva_samvad.jpg"
+                                         class="img-fluid rounded" />
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            </section>
+        </div>
+    </div>
+
+}
+
+<div class="modal fade" id="windowTopModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content position-relative rounded-4">
+
+            <!-- Close Button -->
+            <button type="button" class="btn-close-custom"
+                    data-bs-dismiss="modal" aria-label="Close"></button>
+
+            <!-- Modal Body -->
+            <div class="modal-body p-0">
+
+                <!-- Header Section -->
+                <div class="p-4 text-center text-white"
+                     style="background: linear-gradient(135deg, #f58321, #00a859);">
+                    <h3 class="fw-bold text-white mb-1">
+                        राष्ट्रीय युवा दिवस – युवा संवाद कार्यक्रम 🌟
+                    </h3>
+                    <p class="mb-1">
+                        (स्वामी विवेकानंद जी की जयंती पर समर्पित)
+                    </p>
+                    <p class="mb-0 fw-semibold">
+                        दिनांक: 12 जनवरी 2026 
+                    @*<p>
+                        &nbsp; | &nbsp;
+                        प्रतिभागी: 500
+                    </p>*@
+                    </p>
+                </div>
+
+                <!-- Content Section -->
+                <div class="p-4">
+
+                    <!-- आयोजन -->
+                    <p class="fw-semibold text-center text-dark mb-3">
+                        आयोजन: एक दिवसीय युवा संवाद कार्यक्रम
+                    </p>
+
+                    <!-- उद्देश्य -->
+                    <h5 class="fw-bold text-dark border-bottom mb-2">🟠 कार्यक्रम का उद्देश्य</h5>
+                    <p class="text-muted">
+                        आज का युवा केवल देश का भविष्य ही नहीं, बल्कि वर्तमान की सबसे
+                        बड़ी शक्ति है। राष्ट्रीय युवा दिवस के अवसर पर आयोजित यह
+                        <strong>“युवा संवाद कार्यक्रम”</strong> युवाओं को शिक्षा, कौशल,
+                        शासन-प्रशासन, प्रतियोगी परीक्षाओं, समाज सेवा, यातायात अनुशासन
+                        एवं डिजिटल जिम्मेदारी जैसे विषयों पर जागरूक और सशक्त बनाने
+                        का एक सशक्त मंच है।
+                    </p>
+
+                    <!-- Quote -->
+                    <div class="p-3 my-3 rounded-3"
+                         style="background:#f3e5f5; border-left:4px solid #7b1fa2;">
+                        <em class="fw-semibold">
+                            “उठो, जागो और तब तक मत रुको जब तक लक्ष्य प्राप्त न हो जाए”
+                        </em><br>
+                        <small>— स्वामी विवेकानंद</small>
+                    </div>
+
+                    <!-- Topics -->
+                    <h5 class="fw-bold text-dark border-bottom mb-3">🗂️ संवाद के प्रमुख विषय</h5>
+
+                    <div class="row">
+                        <!-- Left Column -->
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+
+                                <li class="mb-4">
+                                    <strong>1️ शिक्षा एवं कौशल विकास</strong><br>
+                                    • डिग्री के साथ स्किल का महत्व<br>
+                                    • रोजगारपरक शिक्षा, स्टार्टअप व आत्मनिर्भरता<br>
+                                    • ग्रामीण एवं सेमी-अर्बन युवाओं के अवसर
+                                </li>
+
+                                <li class="mb-4">
+                                    <strong>2️ शासन, प्रशासन एवं सरकारी योजनाएँ</strong><br>
+                                    • सरकार कैसे काम करती है – व्यावहारिक जानकारी<br>
+                                    • सरकारी योजनाओं का लाभ कैसे लें<br>
+                                    • नीति निर्माण में युवाओं की भूमिका
+                                </li>
+
+                                <li class="mb-4">
+                                    <strong>3️ प्रतियोगी परीक्षाओं पर संवाद</strong><br>
+                                    • UPSC, PCS, SSC, Police, Banking की रणनीति<br>
+                                    • समय प्रबंधन व मानसिक संतुलन<br>
+                                    • असफलता से सीख और निरंतर प्रयास
+                                </li>
+
+                            </ul>
+                        </div>
+
+                        <!-- Right Column -->
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+
+                                <li class="mb-4">
+                                    <strong>4️ समाज सेवा एवं सोशल वर्क</strong><br>
+                                    • नेतृत्व विकास में समाज सेवा की भूमिका<br>
+                                    • NGO एवं स्वयंसेवी संगठनों में भागीदारी<br>
+                                    • “राष्ट्र निर्माण = समाज सेवा”
+                                </li>
+
+                                <li class="mb-4">
+                                    <strong>5️ यातायात नियम व सड़क सुरक्षा</strong><br>
+                                    • जीवन सुरक्षा ही सर्वोपरि<br>
+                                    • ट्रैफिक अनुशासन की जिम्मेदारी<br>
+                                    • हेलमेट, सीट बेल्ट, गति सीमा का महत्व
+                                </li>
+
+                                <li class="mb-4">
+                                    <strong>6️ सोशल मीडिया एवं डिजिटल जिम्मेदारी</strong><br>
+                                    • फेक न्यूज़ से सावधानी<br>
+                                    • डिजिटल शिष्टाचार (Digital Discipline)<br>
+                                    • सोशल मीडिया का सकारात्मक उपयोग
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <!-- Footer Line -->
+                    <div class="text-center fw-bold text-success mt-4">
+                        युवाओं से संवाद ही राष्ट्र निर्माण की सबसे मजबूत नींव है।
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+
+    function isNumberOrDecimal(evt) {
+        var charCode = (evt.which) ? evt.which : evt.keyCode;
+        if (charCode != 46 && charCode > 31
+            && (charCode < 48 || charCode > 57))
+            return false;
+        return true;
+    }
+
+    function validateform() {
+        $("#divload").css({ 'display': 'none' });
+        $(".errortext").removeClass("errortext");
+
+        // Full Name
+        if ($('#FullName').val().trim() == '') {
+            $("#FullName").addClass('errortext');
+            $('#FullName').focus();
+            return false;
+        }
+
+        // Father / Guardian Name
+        if ($('#FatherName').val().trim() == '') {
+            $("#FatherName").addClass('errortext');
+            $('#FatherName').focus();
+            return false;
+        }
+
+        // Age
+        if ($('#Age').val().trim() == '') {
+            $("#Age").addClass('errortext');
+            $('#Age').focus();
+            return false;
+        }
+
+        // Mobile Number
+        if ($('#MobileNo').val().trim() == '') {
+            $("#MobileNo").addClass('errortext');
+            $('#MobileNo').focus();
+            return false;
+        }
+
+        if ($('#MobileNo').val().length != 10) {
+            $("#MobileNo").addClass('errortext');
+            $('#MobileNo').focus();
+            return false;
+        }
+
+        // Email (optional)
+        if ($('#Email').val().trim() != '') {
+            var emailPattern = /^[^\s@@]+@@[^\s@@]+\.[^\s@@]+$/;
+            if (!emailPattern.test($('#Email').val())) {
+                $("#Email").addClass('errortext');
+                $('#Email').focus();
+                return false;
+            }
+        }
+
+        // Address
+        if ($('#Address').val().trim() == '') {
+            $("#Address").addClass('errortext');
+            $('#Address').focus();
+            return false;
+        }
+
+        // Institute
+        if ($('#InstituteName').val().trim() == '') {
+            $("#InstituteName").addClass('errortext');
+            $('#InstituteName').focus();
+            return false;
+        }
+
+        // Course
+        if ($('#Course').val().trim() == '') {
+            $("#Course").addClass('errortext');
+            $('#Course').focus();
+            return false;
+        }
+
+        return true;
+    }
+</script>

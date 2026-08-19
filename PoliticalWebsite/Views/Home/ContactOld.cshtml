@@ -1,0 +1,388 @@
+﻿@model PoliticalWebsite.Models.Home
+
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/WebsiteLayout.cshtml";
+}
+
+<style>
+    .contact-form .form-control:focus {
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+        border-color: #007bff;
+    }
+
+    canvas#capCanvas {
+        background: #fff;
+    }
+
+    @@media (max-width: 576px) {
+        .contact-form {
+            padding: 1rem;
+        }
+    }
+</style>
+
+@using (Html.BeginForm("Contact", "Home", FormMethod.Post, new { @id = "form1", enctype = "multipart/form-data" }))
+{
+    <div class="page-wrapper">
+        <section class="page-header-hi" style="background-image: url('/images/ab_bg.jpg');">
+            <div class="container">
+                <div class="pbmit-title-bar-content">
+                    <div class="pbmit-title-bar-content-inner">
+                        <div class="pbmit-tbar">
+                            <div class="pbmit-tbar-inner container">
+                                <h1 class="pbmit-tbar-title">संपर्क करें</h1>
+                            </div>
+                        </div>
+                        <div class="pbmit-breadcrumb pt-2">
+                            <div class="pbmit-breadcrumb-inner">
+                                <span><a title="" href="index.html" class="home"><span>होम</span></a></span>
+                                <span class="sep"><i class="pbmit-base-icon-angle-double-right"></i></span>
+                                <span><span class="post-root post post-post current-item"> संपर्क करें</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Us Content -->
+        <div class="page-content">
+            <!-- Contact -->
+            <section class="section-lgt contact-section">
+                <div class="container">
+                    <div class="row g-0">
+                        <div class="col-md-12 text-center">
+                            <div class="pbmit-heading-subheading">
+                                <h2 class="pbmit-title mb-3">सहायता की आवश्यकता होने पर आप <br /> हमसे जुड़ सकते हैं!!</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <section class="contact-section-bg">
+                    <div class="container">
+                        <div class="row g-0">
+                            <div class="col-md-6">
+                                <div class="contact-section-left">
+                                    <div class="pbmit-ihbox pbmit-ihbox-style-4">
+                                        <div class="pbmit-ihbox-box d-flex align-items-center">
+                                            <div class="pbmit-ihbox-icon">
+                                                <div class="pbmit-ihbox-icon-wrapper">
+                                                    <i class="pbmit-politicia-icon pbmit-politicia-icon-placeholder"></i>
+                                                </div>
+                                            </div>
+                                            <div class="pbmit-ihbox-contents">
+                                                <h2 class="pbmit-element-title">हमारा स्थान</h2>
+                                                <div>विधानसभा रामपुर कारखाना, देवरिया, उत्तर प्रदेश, भारत</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pbmit-ihbox pbmit-ihbox-style-4">
+                                        <div class="pbmit-ihbox-box d-flex align-items-center">
+                                            <div class="pbmit-ihbox-icon">
+                                                <div class="pbmit-ihbox-icon-wrapper">
+                                                    <i class="pbmit-politicia-icon pbmit-politicia-icon-telephone"></i>
+                                                </div>
+                                            </div>
+                                            <div class="pbmit-ihbox-contents">
+                                                <h2 class="pbmit-element-title">फ़ोन नंबर</h2>
+                                                <div>+91 94159 64410</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pbmit-ihbox pbmit-ihbox-style-4">
+                                        <div class="pbmit-ihbox-box d-flex align-items-center">
+                                            <div class="pbmit-ihbox-icon">
+                                                <div class="pbmit-ihbox-icon-wrapper">
+                                                    <i class="pbmit-politicia-icon pbmit-politicia-icon-email"></i>
+                                                </div>
+                                            </div>
+                                            <div class="pbmit-ihbox-contents">
+                                                <h2 class="pbmit-element-title">हमारा ईमेल पता</h2>
+                                                <div class="word-break">surendrachaurasia@gmail.com</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="contact-form p-4 my-5  bg-white rounded shadow-sm">
+                                    <div class="row g-3">
+                                        <span class="text-danger">@TempData["Contact"]</span>
+
+                                        <!-- Name -->
+                                        <div class="col-md-6">
+                                            @Html.TextBoxFor(m => m.Name, new { @class = "form-control", @placeholder = "आपका नाम" })
+                                        </div>
+
+                                        <!-- Email -->
+                                        <div class="col-md-6">
+                                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @placeholder = "आपका ईमेल" })
+                                        </div>
+
+                                        <!-- Mobile -->
+                                        <div class="col-md-6">
+                                            @Html.TextBoxFor(m => m.Mobile, new
+                                            {
+                                              @class = "form-control",
+                                              @placeholder = "आपका फोन नं.",
+                                              @onkeypress = "return isNumberOrDecimal(event);",
+                                              @maxlength = "10"
+                                            })
+                                        </div>
+
+                                        <!-- Subject -->
+                                        <div class="col-md-6">
+                                            @Html.TextBoxFor(m => m.Subject, new { @class = "form-control", @placeholder = "विषय" })
+                                        </div>
+
+                                        <!-- Message -->
+                                        <div class="col-12">
+                                            @Html.TextAreaFor(m => m.Message, new
+                                            {
+                                              @class = "form-control",
+                                              @placeholder = "आपका संदेश",
+                                              @rows = "4"
+                                            })
+                                        </div>
+
+                                        <!-- CAPTCHA Section -->
+                                        <div class="col-12">
+                                            <div class="border rounded p-3 bg-light mt-3">
+                                                <h5 class="text-center mb-3">CAPTCHA</h5>
+
+                                                <div class="text-center mb-3">
+                                                    <canvas id="capCanvas" width="320" height="80" class="border rounded w-100" style="max-width:320px;"></canvas>
+                                                </div>
+
+                                                <div class="row g-2 align-items-center mb-3">
+                                                    <div class="col-sm-4 d-grid">
+                                                        <button id="refresh" type="button" class="btn btn-secondary w-100">Refresh</button>
+                                                    </div>
+                                                    <div class="col-sm-4 d-grid">
+                                                        <button id="play" type="button" class="btn pbmit-btn py-2 w-100">Play</button>
+                                                    </div>
+                                                    <div class="col-sm-4 text-sm-end text-center">
+                                                        <label for="len" class="form-label mb-0 small">Length:</label>
+                                                        <select id="len" class="form-select form-select-sm d-inline w-auto ms-1">
+                                                            <option value="4">4</option>
+                                                            <option value="5" selected>5</option>
+                                                            <option value="6">6</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row g-2">
+                                                    <div class="col-md-8">
+                                                        <input id="input" type="text" class="form-control" placeholder="Type CAPTCHA here" autocomplete="off" />
+                                                    </div>
+                                                    <div class="col-md-4 d-grid">
+                                                        <button id="verify" type="button" class="btn btn-success w-100">Verify</button>
+                                                    </div>
+                                                </div>
+
+                                                <span id="captchamessage" class="text-center small text-muted mt-2"></span>
+                                            </div>
+                                        </div>
+
+                                        <!-- Submit -->
+                                        <div class="col-12 text-center mt-4">
+                                            <input type="submit" id="btnSave" name="btnSave"
+                                                   value="मेसेज भेजें"
+                                                   onclick="return validateform();"
+                                                   class="btn pbmit-btn py-2 pt-3" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <!-- Contact End -->
+        </div>
+        <!-- Contact Us Content End -->
+    </div>
+    <!-- Page Wrapper End -->
+}
+
+
+
+<script src="~/files/bower_components/jquery/js/jquery.min.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css">
+
+<script>
+    function validateform() {
+        $("#divload").css({ 'display': 'none' });
+        $(".errortext").removeClass("errortext");
+
+        if ($('#Name').val() == '') {
+            $("#Name").addClass('errortext');
+            $('#Name').focus();
+            return false;
+        }
+        if ($('#Email').val() == '') {
+            $("#Email").addClass('errortext');
+            $('#Email').focus();
+            return false;
+        }
+        if ($('#Mobile').val() == '') {
+            $("#Mobile").addClass('errortext');
+            $('#Mobile').focus();
+            return false;
+        }
+        if ($('#Subject').val() == '') {
+            $("#Subject").addClass('errortext');
+            $('#Subject').focus();
+            return false;
+        }
+        if ($('#Message').val() == '') {
+            $("#Message").addClass('errortext');
+            $('#Message').focus();
+            return false;
+        }
+        var captcha = $('#captchamessage').text().trim();
+        if (captcha != '✅ Verified.') {
+            $("#input").addClass('errortext');
+            $('#input').focus();
+            return false;
+        }
+        $("#divload").css({ 'display': '' });
+        return true;
+    }
+
+    function isNumberOrDecimal(evt) {
+        var charCode = (evt.which) ? evt.which : evt.keyCode;
+        if (charCode != 46 && charCode > 31
+            && (charCode < 48 || charCode > 57))
+            return false;
+        return true;
+    }
+</script>
+
+<style>
+    .errortext {
+        border: 1px solid red !important;
+        background-color: #fff0f0 !important;
+    }
+</style>
+
+
+<script>
+    (function () {
+        const canvas = document.getElementById('capCanvas');
+        const ctx = canvas.getContext('2d');
+        const input = document.getElementById('input');
+        const msg = document.getElementById('captchamessage');
+        const refreshBtn = document.getElementById('refresh');
+        const verifyBtn = document.getElementById('verify');
+        const playBtn = document.getElementById('play');
+        const lenSel = document.getElementById('len');
+
+        const CHARS = "23456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz";
+        let current = "";
+
+        function randText(n) {
+            let s = "";
+            for (let i = 0; i < n; i++) s += CHARS.charAt(Math.floor(Math.random() * CHARS.length));
+            return s;
+        }
+
+        function draw(text) {
+            const w = canvas.width, h = canvas.height;
+            ctx.clearRect(0, 0, w, h);
+            ctx.fillStyle = "#f6f9ff";
+            ctx.fillRect(0, 0, w, h);
+
+            // Noise lines
+            for (let i = 0; i < 5; i++) {
+                ctx.beginPath();
+                ctx.moveTo(Math.random() * w, Math.random() * h);
+                ctx.lineTo(Math.random() * w, Math.random() * h);
+                ctx.strokeStyle = `rgba(0,0,0,${0.06 + Math.random() * 0.08})`;
+                ctx.lineWidth = 1 + Math.random();
+                ctx.stroke();
+            }
+
+            // Characters
+            const chars = text.split('');
+            const fontSize = Math.floor(h * 0.6);
+            chars.forEach((ch, i) => {
+                const x = (w / (chars.length + 1)) * (i + 1);
+                const y = h / 2 + (Math.random() * 10 - 5);
+                ctx.save();
+                ctx.translate(x, y);
+                const angle = (Math.random() * 0.4 - 0.2);
+                ctx.rotate(angle);
+                ctx.font = `${fontSize - Math.floor(Math.random() * 8)}px Arial`;
+                ctx.fillStyle = `rgb(${20 + Math.floor(Math.random() * 120)}, ${20 + Math.floor(Math.random() * 120)}, ${20 + Math.floor(Math.random() * 120)})`;
+                ctx.fillText(ch, -fontSize / 2 + 2, fontSize / 3);
+                ctx.restore();
+            });
+
+            // Dots
+            for (let i = 0; i < 30; i++) {
+                ctx.beginPath();
+                ctx.arc(Math.random() * w, Math.random() * h, Math.random() * 1.5, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(0,0,0,${0.04 + Math.random() * 0.12})`;
+                ctx.fill();
+            }
+        }
+
+        function regenerate() {
+            const len = parseInt(lenSel.value, 10) || 5;
+            current = randText(len);
+            draw(current);
+            input.value = "";
+            msg.textContent = "";
+            canvas.setAttribute('aria-label', 'CAPTCHA image. Enter the characters shown.');
+        }
+
+        function verify() {
+            const val = (input.value || "").trim();
+            if (!val) {
+                msg.className = 'msg err';
+                msg.textContent = 'Please enter CAPTCHA.';
+                return false;
+            }
+
+            // ✅ Case-sensitive (exact match only)
+            if (val === current) {
+                msg.className = 'msg ok';
+                msg.textContent = '✅ Verified.';
+                return true;
+            } else {
+                msg.className = 'msg err';
+                msg.textContent = '❌ Incorrect. Try again.';
+                return false;
+            }
+        }
+
+        function playAudio() {
+            if (!current) return;
+            if (window.speechSynthesis) {
+                const u = new SpeechSynthesisUtterance(current.split('').join(' '));
+                u.rate = 0.95;
+                u.pitch = 0.8;
+                window.speechSynthesis.cancel();
+                window.speechSynthesis.speak(u);
+            } else {
+                alert('Speech not supported.');
+            }
+        }
+
+        refreshBtn.addEventListener('click', regenerate);
+        verifyBtn.addEventListener('click', verify);
+        playBtn.addEventListener('click', playAudio);
+        lenSel.addEventListener('change', regenerate);
+        input.addEventListener('keypress', e => { if (e.key === 'Enter') verify(); });
+
+        window.addEventListener('load', regenerate);
+        window.addEventListener('pageshow', e => { if (e.persisted) regenerate(); });
+
+        window._captcha = () => current;
+    })();
+</script>
