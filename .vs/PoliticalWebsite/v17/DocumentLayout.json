@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "E:\\Devendra2025\\PoliticalWebsite\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0BA5947E-6C76-4B15-BE5F-C4D04FE2518D}|PoliticalWebsite\\PoliticalWebsite.csproj|E:\\Devendra2025\\PoliticalWebsite\\politicalwebsite\\models\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0BA5947E-6C76-4B15-BE5F-C4D04FE2518D}|PoliticalWebsite\\PoliticalWebsite.csproj|solutionrelative:politicalwebsite\\models\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BA5947E-6C76-4B15-BE5F-C4D04FE2518D}|PoliticalWebsite\\PoliticalWebsite.csproj|e:\\devendra2025\\politicalwebsite\\politicalwebsite\\models\\common.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0BA5947E-6C76-4B15-BE5F-C4D04FE2518D}|PoliticalWebsite\\PoliticalWebsite.csproj|solutionrelative:politicalwebsite\\models\\common.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0BA5947E-6C76-4B15-BE5F-C4D04FE2518D}|PoliticalWebsite\\PoliticalWebsite.csproj|e:\\devendra2025\\politicalwebsite\\politicalwebsite\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0BA5947E-6C76-4B15-BE5F-C4D04FE2518D}|PoliticalWebsite\\PoliticalWebsite.csproj|solutionrelative:politicalwebsite\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0BA5947E-6C76-4B15-BE5F-C4D04FE2518D}|PoliticalWebsite\\PoliticalWebsite.csproj|E:\\Devendra2025\\PoliticalWebsite\\politicalwebsite\\views\\home\\gallery.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{0BA5947E-6C76-4B15-BE5F-C4D04FE2518D}|PoliticalWebsite\\PoliticalWebsite.csproj|solutionrelative:politicalwebsite\\views\\home\\gallery.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0BA5947E-6C76-4B15-BE5F-C4D04FE2518D}|PoliticalWebsite\\PoliticalWebsite.csproj|E:\\Devendra2025\\PoliticalWebsite\\politicalwebsite\\models\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0BA5947E-6C76-4B15-BE5F-C4D04FE2518D}|PoliticalWebsite\\PoliticalWebsite.csproj|solutionrelative:politicalwebsite\\models\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0BA5947E-6C76-4B15-BE5F-C4D04FE2518D}|PoliticalWebsite\\PoliticalWebsite.csproj|E:\\Devendra2025\\PoliticalWebsite\\politicalwebsite\\views\\home\\youthconversation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -50,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -73,12 +77,25 @@
               "Name": "ST:132:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
             },
             {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Common.cs",
+              "DocumentMoniker": "E:\\Devendra2025\\PoliticalWebsite\\PoliticalWebsite\\Models\\Common.cs",
+              "RelativeDocumentMoniker": "PoliticalWebsite\\Models\\Common.cs",
+              "ToolTip": "E:\\Devendra2025\\PoliticalWebsite\\PoliticalWebsite\\Models\\Common.cs",
+              "RelativeToolTip": "PoliticalWebsite\\Models\\Common.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-19T08:03:45.653Z",
+              "EditorCaption": ""
+            },
+            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Gallery.cshtml",
               "DocumentMoniker": "E:\\Devendra2025\\PoliticalWebsite\\PoliticalWebsite\\Views\\Home\\Gallery.cshtml",
               "RelativeDocumentMoniker": "PoliticalWebsite\\Views\\Home\\Gallery.cshtml",
@@ -90,19 +107,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Connection.cs",
               "DocumentMoniker": "E:\\Devendra2025\\PoliticalWebsite\\PoliticalWebsite\\Models\\Connection.cs",
               "RelativeDocumentMoniker": "PoliticalWebsite\\Models\\Connection.cs",
               "ToolTip": "E:\\Devendra2025\\PoliticalWebsite\\PoliticalWebsite\\Models\\Connection.cs",
               "RelativeToolTip": "PoliticalWebsite\\Models\\Connection.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB4AAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-06T05:48:21.234Z"
+              "WhenOpened": "2026-08-06T05:48:21.234Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "NewsPressRelease.cshtml",
               "DocumentMoniker": "E:\\Devendra2025\\PoliticalWebsite\\PoliticalWebsite\\Views\\Home\\NewsPressRelease.cshtml",
               "RelativeDocumentMoniker": "PoliticalWebsite\\Views\\Home\\NewsPressRelease.cshtml",
@@ -114,7 +132,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Contact.cshtml",
               "DocumentMoniker": "E:\\Devendra2025\\PoliticalWebsite\\PoliticalWebsite\\Views\\Home\\Contact.cshtml",
               "RelativeDocumentMoniker": "PoliticalWebsite\\Views\\Home\\Contact.cshtml",
@@ -126,7 +144,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "YouthConversation.cshtml",
               "DocumentMoniker": "E:\\Devendra2025\\PoliticalWebsite\\PoliticalWebsite\\Views\\Home\\YouthConversation.cshtml",
               "RelativeDocumentMoniker": "PoliticalWebsite\\Views\\Home\\YouthConversation.cshtml",
@@ -138,20 +156,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "HomeController.cs",
               "DocumentMoniker": "E:\\Devendra2025\\PoliticalWebsite\\PoliticalWebsite\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "PoliticalWebsite\\Controllers\\HomeController.cs",
-              "ToolTip": "E:\\Devendra2025\\PoliticalWebsite\\PoliticalWebsite\\Controllers\\HomeController.cs*",
-              "RelativeToolTip": "PoliticalWebsite\\Controllers\\HomeController.cs*",
-              "ViewState": "AgIAAAsAAAAAAAAAAAA5wBYAAAARAAAAAAAAAA==",
+              "ToolTip": "E:\\Devendra2025\\PoliticalWebsite\\PoliticalWebsite\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "PoliticalWebsite\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwCIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-31T05:02:41.471Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "ContactDetails.cshtml",
               "DocumentMoniker": "E:\\Devendra2025\\PoliticalWebsite\\PoliticalWebsite\\Views\\Admin\\ContactDetails.cshtml",
               "RelativeDocumentMoniker": "PoliticalWebsite\\Views\\Admin\\ContactDetails.cshtml",
@@ -163,7 +181,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "AdminController.cs",
               "DocumentMoniker": "E:\\Devendra2025\\PoliticalWebsite\\PoliticalWebsite\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "PoliticalWebsite\\Controllers\\AdminController.cs",
@@ -175,7 +193,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "WebsiteLayout.cshtml",
               "DocumentMoniker": "E:\\Devendra2025\\PoliticalWebsite\\PoliticalWebsite\\Views\\Shared\\WebsiteLayout.cshtml",
               "RelativeDocumentMoniker": "PoliticalWebsite\\Views\\Shared\\WebsiteLayout.cshtml",
@@ -187,7 +205,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Admin_LayoutPage.cshtml",
               "DocumentMoniker": "E:\\Devendra2025\\PoliticalWebsite\\PoliticalWebsite\\Views\\Shared\\Admin_LayoutPage.cshtml",
               "RelativeDocumentMoniker": "PoliticalWebsite\\Views\\Shared\\Admin_LayoutPage.cshtml",
