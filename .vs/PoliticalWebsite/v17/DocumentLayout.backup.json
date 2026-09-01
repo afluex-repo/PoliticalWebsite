@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "F:\\SakshiPandey\\MLASCPortal\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0BA5947E-6C76-4B15-BE5F-C4D04FE2518D}|PoliticalWebsite\\PoliticalWebsite.csproj|F:\\SakshiPandey\\MLASCPortal\\politicalwebsite\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0BA5947E-6C76-4B15-BE5F-C4D04FE2518D}|PoliticalWebsite\\PoliticalWebsite.csproj|f:\\sakshipandey\\mlascportal\\politicalwebsite\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0BA5947E-6C76-4B15-BE5F-C4D04FE2518D}|PoliticalWebsite\\PoliticalWebsite.csproj|solutionrelative:politicalwebsite\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -11,15 +11,15 @@
       "RelativeMoniker": "D:0:0:{0BA5947E-6C76-4B15-BE5F-C4D04FE2518D}|PoliticalWebsite\\PoliticalWebsite.csproj|solutionrelative:politicalwebsite\\controllers\\mastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0BA5947E-6C76-4B15-BE5F-C4D04FE2518D}|PoliticalWebsite\\PoliticalWebsite.csproj|f:\\sakshipandey\\mlascportal\\politicalwebsite\\controllers\\adminbasecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0BA5947E-6C76-4B15-BE5F-C4D04FE2518D}|PoliticalWebsite\\PoliticalWebsite.csproj|F:\\SakshiPandey\\MLASCPortal\\politicalwebsite\\controllers\\adminbasecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0BA5947E-6C76-4B15-BE5F-C4D04FE2518D}|PoliticalWebsite\\PoliticalWebsite.csproj|solutionrelative:politicalwebsite\\controllers\\adminbasecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0BA5947E-6C76-4B15-BE5F-C4D04FE2518D}|PoliticalWebsite\\PoliticalWebsite.csproj|f:\\sakshipandey\\mlascportal\\politicalwebsite\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0BA5947E-6C76-4B15-BE5F-C4D04FE2518D}|PoliticalWebsite\\PoliticalWebsite.csproj|F:\\SakshiPandey\\MLASCPortal\\politicalwebsite\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0BA5947E-6C76-4B15-BE5F-C4D04FE2518D}|PoliticalWebsite\\PoliticalWebsite.csproj|solutionrelative:politicalwebsite\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0BA5947E-6C76-4B15-BE5F-C4D04FE2518D}|PoliticalWebsite\\PoliticalWebsite.csproj|f:\\sakshipandey\\mlascportal\\politicalwebsite\\views\\shared\\websitelayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{0BA5947E-6C76-4B15-BE5F-C4D04FE2518D}|PoliticalWebsite\\PoliticalWebsite.csproj|F:\\SakshiPandey\\MLASCPortal\\politicalwebsite\\views\\shared\\websitelayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{0BA5947E-6C76-4B15-BE5F-C4D04FE2518D}|PoliticalWebsite\\PoliticalWebsite.csproj|solutionrelative:politicalwebsite\\views\\shared\\websitelayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
@@ -89,7 +89,7 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 221,
+          "DockedWidth": 204,
           "SelectedChildIndex": 30,
           "Children": [
             {
@@ -226,8 +226,7 @@
               "RelativeToolTip": "PoliticalWebsite\\Views\\Shared\\WebsiteLayout.cshtml",
               "ViewState": "AgIAAJMAAAAAAAAAAAAswJoAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-08-11T09:50:12.039Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-11T09:50:12.039Z"
             },
             {
               "$type": "Document",
@@ -237,7 +236,7 @@
               "RelativeDocumentMoniker": "PoliticalWebsite\\Controllers\\HomeController.cs",
               "ToolTip": "F:\\SakshiPandey\\MLASCPortal\\PoliticalWebsite\\Controllers\\HomeController.cs",
               "RelativeToolTip": "PoliticalWebsite\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAHwAAAAAAAAAAAAcwHcAAABWAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAAF0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-31T05:02:41.471Z",
               "EditorCaption": ""
@@ -252,8 +251,7 @@
               "RelativeToolTip": "PoliticalWebsite\\Views\\Home\\NewsPressRelease.cshtml",
               "ViewState": "AgIAADAAAAAAAAAAAAAYwDYAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-08-13T06:34:58.221Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-13T06:34:58.221Z"
             },
             {
               "$type": "Document",
@@ -265,8 +263,7 @@
               "RelativeToolTip": "PoliticalWebsite\\Controllers\\MasterController.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAI4CAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-14T07:42:54.492Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-14T07:42:54.492Z"
             },
             {
               "$type": "Document",
@@ -434,8 +431,7 @@
               "RelativeToolTip": "PoliticalWebsite\\Controllers\\AdminController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-01T06:59:13.526Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-01T06:59:13.526Z"
             },
             {
               "$type": "Document",
@@ -447,13 +443,12 @@
               "RelativeToolTip": "PoliticalWebsite\\Controllers\\AdminBaseController.cs",
               "ViewState": "AgIAACIAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-01T06:59:25.267Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-01T06:59:25.267Z"
             }
           ]
         },
         {
-          "DockedWidth": 43,
+          "DockedWidth": 60,
           "SelectedChildIndex": -1,
           "Children": [
             {
