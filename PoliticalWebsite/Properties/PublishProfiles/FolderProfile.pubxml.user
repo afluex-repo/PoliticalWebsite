@@ -2,8 +2,8 @@
 <!-- https://go.microsoft.com/fwlink/?LinkID=208121. -->
 <Project>
   <PropertyGroup>
-    <_PublishTargetUrl>F:\SakshiPandey\Publish\MLAChaurasia19-08-26</_PublishTargetUrl>
-    <History>False|2026-08-19T06:03:59.2528171Z||;True|2026-08-13T17:59:40.7210828+05:30||;True|2026-08-13T17:59:18.4263100+05:30||;True|2026-08-13T17:47:48.2484080+05:30||;False|2026-08-13T17:46:41.9855020+05:30||;False|2026-08-13T17:32:49.0270954+05:30||;False|2026-08-13T17:20:03.2828914+05:30||;False|2026-08-13T17:17:08.4844021+05:30||;False|2026-08-13T17:16:29.4697899+05:30||;True|2025-05-06T11:25:29.9009376+05:30||;</History>
+    <_PublishTargetUrl>F:\SakshiPandey\Publish\PoliticalProject</_PublishTargetUrl>
+    <History>True|2026-08-24T12:04:38.7194585Z||;False|2026-08-24T17:33:20.6994612+05:30||;False|2026-08-24T17:29:43.2971297+05:30||;False|2026-08-19T11:33:59.2528171+05:30||;True|2026-08-13T17:59:40.7210828+05:30||;True|2026-08-13T17:59:18.4263100+05:30||;True|2026-08-13T17:47:48.2484080+05:30||;False|2026-08-13T17:46:41.9855020+05:30||;False|2026-08-13T17:32:49.0270954+05:30||;False|2026-08-13T17:20:03.2828914+05:30||;False|2026-08-13T17:17:08.4844021+05:30||;False|2026-08-13T17:16:29.4697899+05:30||;True|2025-05-06T11:25:29.9009376+05:30||;</History>
     <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>
@@ -1265,13 +1265,13 @@
       <publishTime>08/11/2026 11:15:14</publishTime>
     </File>
     <File Include="bin/PoliticalWebsite.dll">
-      <publishTime>08/19/2026 11:37:22</publishTime>
+      <publishTime>08/24/2026 17:34:31</publishTime>
     </File>
     <File Include="bin/PoliticalWebsite.dll.config">
       <publishTime>08/11/2026 11:15:14</publishTime>
     </File>
     <File Include="bin/PoliticalWebsite.pdb">
-      <publishTime>08/19/2026 11:37:22</publishTime>
+      <publishTime>08/24/2026 17:34:31</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>08/11/2026 11:15:16</publishTime>
@@ -1969,6 +1969,9 @@
     <File Include="Views/Home/About.cshtml">
       <publishTime>08/14/2026 16:13:27</publishTime>
     </File>
+    <File Include="Views/Home/BlogDetails.cshtml">
+      <publishTime>08/24/2026 17:23:56</publishTime>
+    </File>
     <File Include="Views/Home/Contact.cshtml">
       <publishTime>08/18/2026 14:01:11</publishTime>
     </File>
@@ -1988,7 +1991,7 @@
       <publishTime>08/13/2026 16:38:04</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>08/14/2026 16:37:17</publishTime>
+      <publishTime>08/24/2026 16:31:36</publishTime>
     </File>
     <File Include="Views/Home/KushahariMahotsav.cshtml">
       <publishTime>08/11/2026 11:15:14</publishTime>
@@ -1997,7 +2000,7 @@
       <publishTime>08/11/2026 11:15:14</publishTime>
     </File>
     <File Include="Views/Home/NewsPressRelease.cshtml">
-      <publishTime>08/13/2026 16:42:33</publishTime>
+      <publishTime>08/24/2026 16:32:32</publishTime>
     </File>
     <File Include="Views/Home/NewsPressReleaseOld.cshtml">
       <publishTime>08/11/2026 11:15:14</publishTime>

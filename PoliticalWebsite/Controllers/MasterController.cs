@@ -686,5 +686,7 @@ namespace PoliticalWebsite.Controllers
             }
             return RedirectToAction("ChangePassword", "Master");
         }
+
+
     }
 }
