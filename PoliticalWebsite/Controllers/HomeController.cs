@@ -187,7 +187,7 @@ namespace PoliticalWebsite.Controllers
         }
 
 
-
+       
 
 
 
@@ -478,6 +478,37 @@ namespace PoliticalWebsite.Controllers
             TempData["FormSubmitted"] = true;
 
             return RedirectToAction("YouthConversation", "Home");
+        }
+
+
+        public ActionResult BlogDetails(string id)
+        {
+            Home model = new Home();
+
+            DataSet ds = model.NewsimageList();
+
+            if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+            {
+                foreach (DataRow r in ds.Tables[0].Rows)
+                {
+                    if (r["Pk_NewsId"].ToString() == id)
+                    {
+                        model.Pk_NewsId = r["Pk_NewsId"].ToString();
+                        // Remove ../ from image path
+                        model.NewsImage = r["NewsImage"].ToString()
+                            .Replace("../", "/");
+
+                        model.Discription = r["Discription"].ToString();
+                        model.Message = r["Message"].ToString();
+                        model.Date = r["Date"].ToString();
+                        model.Year = r["Year"].ToString();
+
+                        break;
+                    }
+                }
+            }
+
+            return View(model);
         }
 
     }

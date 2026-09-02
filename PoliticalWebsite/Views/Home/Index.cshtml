@@ -916,8 +916,16 @@
                                 <!-- Read More -->
                                 <div class="blog-item-btn">
 
-                                    <a href="#!" class="readmore-btn">
-                                        और पढ़ें
+                                    @*<a href="/Home/BlogDetails" class="readmore-btn">
+            और पढ़ें
+        </a>*@
+                                    <a href="@Url.Action("BlogDetails", "Home", new { id = item.Pk_NewsId })"
+                                       class="blog-read-more">
+
+                                        <span>और पढ़ें</span>
+
+                                        <i class="fas fa-arrow-right"></i>
+
                                     </a>
 
                                 </div>
