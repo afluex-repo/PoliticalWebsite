@@ -75,4 +75,6 @@ E:\Devendra2025\PoliticalWebsite\PoliticalWebsite\bin\PoliticalWebsite.dll
 E:\Devendra2025\PoliticalWebsite\PoliticalWebsite\bin\PoliticalWebsite.pdb
 E:\Devendra2025\PoliticalWebsite\PoliticalWebsite\obj\Debug\PoliticalWebsite.dll
 E:\Devendra2025\PoliticalWebsite\PoliticalWebsite\obj\Debug\PoliticalWebsite.pdb
-E:\Devendra2025\PoliticalWebsite\PoliticalWebsite\obj\Debug\PoliticalWebsite.csprojResolveAssemblyReference.cache
+E:\Devendra2025\PoliticalWebsite\PoliticalWebsite\obj\Debug\PoliticalWebsite.csproj.AssemblyReference.cache
+E:\Devendra2025\PoliticalWebsite\PoliticalWebsite\obj\Debug\PoliticalWebsite.csproj.CoreCompileInputs.cache
+E:\Devendra2025\PoliticalWebsite\PoliticalWebsite\obj\Debug\Politica.1E38D5E2.Up2Date
