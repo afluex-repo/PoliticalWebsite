@@ -4,82 +4,60 @@
     ViewBag.Title = "Gallery";
     Layout = "~/Views/Shared/WebsiteLayout.cshtml";
 }
-
-@using (Html.BeginForm("Gallery", "Home", FormMethod.Post, new { @id = "form1", enctype = "multipart/form-data" }))
-{
-    <!-- Page Wrapper -->
-    <div class="page-wrapper">
-        <section class="page-header-hi" style="background-image: url('/images/ab_bg.jpg');">
-            <div class="container">
-                <div class="pbmit-title-bar-content">
-                    <div class="pbmit-title-bar-content-inner">
-                        <div class="pbmit-tbar">
-                            <div class="pbmit-tbar-inner container">
-                                <h1 class="pbmit-tbar-title">हमारी फोटो गैलरी</h1>
-                            </div>
-                        </div>
-                        <div class="pbmit-breadcrumb">
-                            <div class="pbmit-breadcrumb-inner">
-                                <span><a title="" href="/Home/Index" class="home"><span>होम</span></a></span>
-                                <span class="sep"><i class="pbmit-base-icon-angle-double-right"></i></span>
-                                <span><span class="post-root post post-post current-item">हमारी फोटो गैलरी</span></span>
-                            </div>
-                        </div>
-                    </div>
+<!-- Page Header Start -->
+<div class="page-header parallaxie">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-12">
+                <!-- Page Header Box Start -->
+                <div class="page-header-box">
+                    <h1 class="text-anime-style-2" data-cursor="-opaque">हमारी फोटो गैलरी</h1>
+                    <nav class="wow fadeInUp">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/Home/Index">होम </a></li>
+                            <li class="breadcrumb-item active" aria-current="page">हमारी फोटो गैलरी</li>
+                        </ol>
+                    </nav>
                 </div>
+                <!-- Page Header Box End -->
             </div>
-        </section>
-        <!-- Page Content -->
-        <div class="page-content">
+        </div>
+    </div>
+</div>
+<!-- Page Header End -->
+<div class="our-gallery">
+    <div class="container">
 
-            <!-- Our Gallery -->
-            <section class="section-lgx section-gallery-bg">
-                <div class="container">
-                    <div class="row">
-                        @if (Model != null)
-                        {
-                            if (Model.lstgallery != null)
-                            {
-                                int i = 0;
-                                foreach (var item in Model.lstgallery)
-                                {
-                                    <div class="col-sm-12 col-md-4">
+        <div class="row gallery-items">
 
-                                        <article class="pbmit-portfolio-style-1">
-                                            <div class="pbminfotech-post-content">
-                                                <div class="pbmit-featured-wrapper">
+            @if (Model.lstgallery != null && Model.lstgallery.Count > 0)
+            {
+                foreach (var item in Model.lstgallery)
+                {
+                    <div class="col-lg-3 col-6">
 
-                                                    <div class="pbmit-featured-wrapper">
-                                                        <img src="@item.GalleryImage" class="img-fluid" alt="" />
-                                                    </div>
-                                                    <div class="pbminfotech-icon-box pbminfotech-media-link">
-                                                        <a class="pbmit-lightbox" href="@item.GalleryImage">
-                                                            <i class="pbmit-base-icon-plus"></i>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </article>
+                        <!-- Photo Gallery Item Start -->
+                        <div class="photo-gallery wow fadeInUp">
 
-                                    </div>
-                                    i++;
-                                }
-                            }
-                        }
+                            <a href="@item.GalleryImage"
+                               data-cursor-text="View">
+
+                                <figure class="image-anime">
+                                    <img src="@item.GalleryImage"
+                                         alt="@item.Discription">
+                                </figure>
+
+                            </a>
+
+                        </div>
+                        <!-- Photo Gallery Item End -->
 
                     </div>
-                </div>
-            </section>
-            <!-- Our Gallery End -->
+                }
+            }
 
         </div>
-        <!-- Page Content End -->
 
     </div>
-    <!-- Page Wrapper End -->
-}
-
-
-
-
-
+</div>
+<!-- Photo Gallery Section End -->

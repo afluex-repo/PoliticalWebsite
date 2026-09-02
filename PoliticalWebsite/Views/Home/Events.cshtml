@@ -5,105 +5,117 @@
     Layout = "~/Views/Shared/WebsiteLayout.cshtml";
 }
 
-
-<!-- Page Wrapper -->
-<div class="page-wrapper">
-    <section class="page-header-hi" style="background-image: url('/images/ab_bg.jpg');">
-        <div class="container">
-            <div class="pbmit-title-bar-content">
-                <div class="pbmit-title-bar-content-inner">
-                    <div class="pbmit-tbar">
-                        <div class="pbmit-tbar-inner container">
-                            <h1 class="pbmit-tbar-title">आयोजन</h1>
-                        </div>
-                    </div>
-                    <div class="pbmit-breadcrumb">
-                        <div class="pbmit-breadcrumb-inner">
-                            <span><a title="" href="/Home/Index" class="home"><span>होम</span></a></span>
-                            <span class="sep"><i class="pbmit-base-icon-angle-double-right"></i></span>
-                            <span><span class="post-root post post-post current-item">हमारा आयोजन</span></span>
-                        </div>
-                    </div>
+<!-- Page Header Start -->
+<div class="page-header parallaxie">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-12">
+                <!-- Page Header Box Start -->
+                <div class="page-header-box">
+                    <h1 class="text-anime-style-2" data-cursor="-opaque">हमारी फोटो गैलरी</h1>
+                    <nav class="wow fadeInUp">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/Home/Index">होम </a></li>
+                            <li class="breadcrumb-item active" aria-current="page">हमारी फोटो गैलरी</li>
+                        </ol>
+                    </nav>
                 </div>
+                <!-- Page Header Box End -->
             </div>
         </div>
-    </section>
-    <!-- Page Content -->
-    <div class="page-content">
+    </div>
+</div>
+<!-- Page Header End -->
+<!-- Our Blog Section Start -->
+<div class="our-blog">
+    <div class="container">
 
-        <!-- Future Start -->
-        <section class="section-lgb pbmit-bg-color-light">
-            <div class="container">
-                <div class="pbmit-heading-subheading text-center pt-5">
-                    <h2 class="pbmit-title">हमारे राजनीतिक भविष्य में भाग लें</h2>
-                </div>
+        <div class="row">
 
-                <div class="row">
-                    @if (Model != null)
-                    {
-                        if (Model.lstevent != null)
-                        {
-                            int i = 0;
-                            foreach (var item in Model.lstevent)
-                            {
-                                <div class="col-xl-6 col-lg-12">
-                                    <div class="wpem-event-action-url event-style-color tour">
-                                        <div class="wpem-event-banner">
-                                            <div class="wpem-event-banner-img"
-                                                 style="background-image: url('@item.EventImage')">
-                                                <div class="wpem-event-date">
-                                                    <div class="wpem-event-date-type">
-                                                        <div class="wpem-from-date">
-                                                            <div class="wpem-date">29</div>
-                                                            <div class="wpem-month">Jul</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="wpem-event-infomation">
-                                            <div class="wpem-event-date">
-                                                <div class="wpem-event-date-type">
-                                                    <div class="wpem-from-date">
-                                                        <div class="wpem-date">29</div>
-                                                        <div class="wpem-month">Jul</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="wpem-event-details">
-                                                <div class="wpem-event-title">
-                                                    <h3 class="wpem-heading-text">
-                                                        <a href="#">@item.Discription</a>
-                                                    </h3>
-                                                </div>
-                                                <div class="pbmit-event-meta">
-                                                    <div class="wpem-event-location">
-                                                        <span class="wpem-event-location-text">@item.Town_Village @item.City</span>
-                                                    </div>
-                                                    <div class="wpem-event-date-time">
-                                                        <span class="wpem-event-date-time-text">@item.Date</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="pbmit-event-arrow-link">
-                                            <a href="#" class="event-style-color tour"></a>
-                                        </div>
-                                    </div>
+            @if (Model.lstevent != null && Model.lstevent.Count > 0)
+            {
+                foreach (var item in Model.lstevent)
+                {
+                    <div class="col-lg-4 col-md-6">
+
+                        <!-- Post Item Start -->
+                        <div class="post-item wow fadeInUp">
+
+                            <!-- Post Featured Image Start -->
+                            <div class="post-featured-image">
+                                <a href="@item.EventImage" data-cursor-text="View">
+                                    <figure class="image-anime">
+                                        <img src="@item.EventImage"
+                                             alt="@item.Discription">
+                                    </figure>
+                                </a>
+                            </div>
+                            <!-- Post Featured Image End -->
+                            <!-- Blog Item Body Start -->
+                            <div class="blog-item-body">
+
+                                <!-- Post Item Content Start -->
+                                <div class="post-item-content">
+                                    <h2>
+                                        <a href="@item.EventImage">
+                                            @item.Discription
+                                        </a>
+                                    </h2>
                                 </div>
-                                i++;
-                            }
-                        }
-                    }
+                                <!-- Post Item Content End -->
+                                <!-- Event Details -->
+                                @*<div class="event-details">
+
+                                        @if (!string.IsNullOrEmpty(item.Date))
+                                        {
+                                            <p>
+                                                <strong>Date:</strong> @item.Date
+                                            </p>
+                                        }
+
+                                        @if (!string.IsNullOrEmpty(item.City))
+                                        {
+                                            <p>
+                                                <strong>City:</strong> @item.City
+                                            </p>
+                                        }
+
+                                        @if (!string.IsNullOrEmpty(item.Town_Village))
+                                        {
+                                            <p>
+                                                <strong>Town/Village:</strong> @item.Town_Village
+                                            </p>
+                                        }
+
+                                    </div>*@
+
+                                <!-- Blog Item Button Start -->
+                                <div class="blog-item-btn">
+                                    <a href="@item.EventImage"
+                                       class="readmore-btn">
+                                        और पढ़ें
+                                    </a>
+                                </div>
+                                <!-- Blog Item Button End -->
+
+                            </div>
+                            <!-- Blog Item Body End -->
+
+                        </div>
+                        <!-- Post Item End -->
+
+                    </div>
+                }
+            }
+            else
+            {
+                <div class="col-12">
+                    <p>No events available.</p>
                 </div>
-            </div>
-        </section>
-        <!-- Future End -->
+            }
+
+        </div>
 
     </div>
-    <!-- Page Content End -->
-
 </div>
-<!-- Page Wrapper End -->
-
-
+<!-- Our Blog Section End -->

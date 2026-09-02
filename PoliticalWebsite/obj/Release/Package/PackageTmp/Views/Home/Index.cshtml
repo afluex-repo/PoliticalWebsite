@@ -5,252 +5,938 @@
     Layout = "~/Views/Shared/WebsiteLayout.cshtml";
 }
 
-<!-- page wrapper -->
-<div class="page-wrapper">
-    <!-- Page Content -->
-    <div class="page-content">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12 p-0">
-                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                                    class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                                    aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                                    aria-label="Slide 3"></button>
-                        </div>
-                        <div class="carousel-inner">
-                            @if (Model != null)
-                            {
-                                if (Model.lstSliderBanner != null)
-                                {
-                                    int i = 1;
-                                    foreach (var item in Model.lstSliderBanner)
-                                    {
-                                        <div class="carousel-item active">
-                                            <img src="@item.SliderBannerImage" class="d-block w-100 img-fluid slider_img" alt="...">
-                                        </div>
-                                        i++;
-                                    }
-                                }
-                            }
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                                data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                                data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                </div>
 
-            </div>
+
+
+
+<!-- Hero Section Start -->
+<div class="hero hero-video hero-slider-layout">
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            @if (Model.lstSliderBanner != null && Model.lstSliderBanner.Count > 0)
+            {
+                foreach (var item in Model.lstSliderBanner)
+                {
+                    <!-- Hero Slide Start -->
+                    <div class="swiper-slide">
+                        <div class="hero-slide">
+
+                            <!-- Slider Image Start -->
+                            <div class="hero-slider-image">
+                                <img src="@Url.Content(item.SliderBannerImage)"
+                                     alt="Slider Banner">
+                            </div>
+                            <!-- Slider Image End -->
+
+                            <div class="container">
+                                <div class="row align-items-center">
+                                    <div class="col-lg-7">
+
+                                        <!-- Hero Content Start -->
+                                        <div class="hero-content">
+
+                                            <!-- Section Title Start -->
+                                            <div class="section-title dark-section">
+                                                <h3 class="wow fadeInUp">
+                                                    सुरेंद्र चौरसिया
+                                                </h3>
+
+                                                <h1 class="text-anime-style-2"
+                                                    data-cursor="-opaque">
+                                                    मिलकर बनाएंगे एक <span>मजबूत भविष्य</span>
+                                                </h1>
+
+                                                <p class="wow fadeInUp"
+                                                   data-wow-delay="0.2s">
+                                                    हमारे अभियान के केंद्र में जनता की सेवा का संकल्प है।
+                                                    हमारे आंदोलन में शामिल होकर, आप सकारात्मक बदलाव लाने,
+                                                    आम भलाई के लिए नीतियों को आकार देने और हमारे समुदाय
+                                                    के लिए एक उज्जवल कल बनाने का हिस्सा बनेंगे।
+                                                </p>
+                                            </div>
+                                            <!-- Section Title End -->
+                                            <!-- Hero Body Start -->
+                                            <div class="hero-body wow fadeInUp"
+                                                 data-wow-delay="0.4s">
+
+                                                <a href="/Home/Contact"
+                                                   class="btn-default btn-highlighted">
+                                                    अभियान में शामिल हों
+                                                </a>
+
+                                            </div>
+                                            <!-- Hero Body End -->
+                                            <!-- Hero Footer Start -->
+                                            <div class="hero-footer wow fadeInUp"
+                                                 data-wow-delay="0.6s">
+
+                                                <p>
+                                                    "आपकी आवाज मायने रखती है। आइए, मिलकर बदलाव लाएं।"
+                                                </p>
+
+                                            </div>
+                                            <!-- Hero Footer End -->
+
+                                        </div>
+                                        <!-- Hero Content End -->
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Hero Slide End -->
+                }
+            }
+
         </div>
 
 
+    </div>
+    <div class="hero-pagination"></div>
+</div>
 
-        <!-- About Start -->
-        <section class="section-lg pbmit-bg-color-light home1-about-us">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xxl-4 col-xl-5 col-md-6">
-                        <div class="home1-about-us-img-left">
-                            <img src="~/images/about.png" class="rounded-circle img-fluid" style="width: 100%;" alt="">
+
+<!-- Hero Section End -->
+<!-- About Us Section Start -->
+<div class="about-us">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <!-- About Us Image Start -->
+                <div class="about-us-image">
+                    <!-- About Image Start -->
+                    <div class="about-image">
+                        <figure class="image-anime">
+                            <img src="/AssetsNew/images/about-us-image.jpg" alt="">
+                        </figure>
+                    </div>
+                    <!-- About Image End -->
+                    <!-- About Image Info Start -->
+                    <div class="about-image-info">
+                        <h2>हमारे बारे में</h2>
+                        <h3>एक बेहतर कल के लिए दूरदर्शी नेता</h3>
+                        <p>- सुरेंद्र चौरसिया</p>
+                    </div>
+                    <!-- About Image Info End -->
+                </div>
+                <!-- About Us Image End -->
+            </div>
+
+            <div class="col-lg-6">
+                <!-- About Us Content Start -->
+                <div class="about-us-content">
+                    <!-- Section Title Start -->
+                    <div class="section-title">
+                        <!-- <h3 class="wow fadeInUp">हमारे बारे में</h3> -->
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">सुरेन्द्र चौरसिया के <span>बारे में </span></h2>
+                        <p class="wow fadeInUp" data-wow-delay="0.2s">सुरेन्द्र चौरसिया जी का जन्म 22 जुलाई 1989 को देवरिया जिले के ग्राम कुशहरी में एक साधारण परिवार में हुआ था। अखिल भारतीय विद्यार्थी परिषद से जुड़कर छात्र राजनीति की शुरुआत की और फिर उत्तर प्रदेश के मुख्यमंत्री योगी आदित्यनाथ के मार्गदर्शन में हिंदुत्व की विचारधारा को अपनाते हुए हिंदू युवा वाहिनी में शामिल हो गए। सुरेन्द्र चौरसिया जी वर्तमान में 339- विधानसभा रामपुर कारखाना (देवरिया) के विधायक है </p>
+                        <p class="wow fadeInUp" data-wow-delay="0.2s">सुरेन्द्र चौरसिया जी सभी लोगों के बीच में लोकप्रिय हैं। अपने कार्यालय में चौरसिया जी जनसुनवाई करके विधानसभा के लोगो की समस्याओं का निवारण करते हैं। उनकी कार्य प्रणाली और आम आदमी के प्रति संवेदनशीलता ने उन्हें एक विशेष दर्जा दिया और उन्हें जनता के बीच जनता के नेता के रूप में बहुत लोकप्रिय बना दिया। चौरसिया जी द्वारा जनता दर्शन कार्यक्रम में आने वाले सभी लोगों तथा कुछ खास समूहों जैसे दिव्यांगों, वरिष्ठ नागरिकों व महिलाओं की समस्याओं को विशेष वरीयता दी जाती है |</p>
+                    </div>
+                    <!-- Section Title End -->
+                    <!-- About Us List Start -->
+                    <div class="about-us-list wow fadeInUp" data-wow-delay="0.4s">
+                        <ul>
+                            <li>सभी के लिए गुणवत्तापूर्ण शिक्षा और कौशल विकास</li>
+                            <li>सस्ती स्वास्थ्य सेवा जो लोगों को मुनाफे से अधिक प्राथमिकता देती है</li>
+                            <li>हर समुदाय के लिए समानता, न्याय और सुरक्षा</li>
+                            <li>मजबूत, लचीला समुदायों के निर्माण के लिए बुनियादी ढांचे में निवेश</li>
+                        </ul>
+                    </div>
+                    <!-- About Us List End -->
+                    <!-- About Author Info Start -->
+                    <div class="about-author-info wow fadeInUp" data-wow-delay="0.6s">
+                        <h3>सुरेन्द्र चौरसिया </h3>
+                        <h4 class="h6">विधायक, 339- विधानसभा रामपुर कारखाना (देवरिया) </h4>
+                    </div>
+                    <!-- About Author Info End -->
+                </div>
+                <!-- About Us Content End -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About Us Section End -->
+<!-- Our Campaign Section Start -->
+<div class="our-campaign">
+    <div class="container">
+        <div class="row section-row align-items-center">
+            <div class="col-lg-6">
+                <!-- Section Title Start -->
+                <div class="section-title section-title-left">
+                    <h3 class="wow fadeInUp">हमारा अभियान</h3>
+                    <h2 class="text-anime-style-2" data-cursor="-opaque">हमारा मिशन: एक <span>बेहतर कल</span> का निर्माण</h2>
+                </div>
+                <!-- Section Title End -->
+            </div>
+
+            <div class="col-lg-6">
+                <!-- Section Title Content Start -->
+                <div class="section-title-content wow fadeInUp" data-wow-delay="0.2s">
+                    <p>हमारे मिशन के केंद्र में समुदाय की शक्ति में अटूट विश्वास है। हम एक ऐसी दुनिया बनाने के लिए प्रतिबद्ध हैं जहां अवसर, समानता और न्याय सभी के लिए सुलभ हो, और हम इस दृष्टि को वास्तविकता में बदलने के लिए अथक प्रयास कर रहे हैं।</p>
+                </div>
+                <!-- Section Title Content End -->
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- Campaign List Start -->
+                <div class="campaign-list wow fadeInUp">
+                    <!-- Campaign Item Start -->
+                    <div class="campaign-item">
+                        <div class="campaign-image">
+                            <img src="/AssetsNew/images/campaign-1.jpg" alt="">
+                        </div>
+                        <div class="campaign-content">
+                            <div class="campaign-icon">
+                                <img src="/AssetsNew/images/icon-campaign-1.svg" alt="">
+                            </div>
+                            <div class="campaign-content-info">
+                                <h3>आर्थिक विकास</h3>
+                                <p>सतत आर्थिक विकास को बढ़ावा देना जो रोजगार सृजित करता है, छोटे व्यवसायों का समर्थन करता है और सभी निवासियों के लिए समृद्धि सुनिश्चित करता है।</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-xxl-8 col-xl-7 col-md-6">
-                        <div class="pbmit-heading-subheading text-left">
-                            <h2 class="pbmit-title">सुरेन्द्र चौरसिया के बारे में</h2>
-                            <div id="google_translate_element"></div>
-                            <div class="pbmit-heading-desc pe-5">
-                                सुरेन्द्र चौरसिया जी का जन्म 22 जुलाई 1989 को देवरिया जिले के ग्राम कुशहरी में एक साधारण परिवार में हुआ था। अखिल भारतीय विद्यार्थी परिषद से जुड़कर छात्र राजनीति की शुरुआत की और फिर उत्तर प्रदेश के मुख्यमंत्री योगी आदित्यनाथ के मार्गदर्शन में हिंदुत्व की विचारधारा को अपनाते हुए हिंदू युवा वाहिनी में शामिल हो गए। सुरेन्द्र चौरसिया जी वर्तमान में 339- विधानसभा रामपुर कारखाना (देवरिया) के विधायक है |
-                                <br />
-                                सुरेन्द्र चौरसिया जी सभी लोगों के बीच में लोकप्रिय हैं। अपने कार्यालय में चौरसिया जी जनसुनवाई करके विधानसभा के लोगो की समस्याओं का निवारण करते हैं। उनकी कार्य प्रणाली और आम आदमी के प्रति संवेदनशीलता ने उन्हें एक विशेष दर्जा दिया और उन्हें जनता के बीच जनता के नेता के रूप में बहुत लोकप्रिय बना दिया। चौरसिया जी द्वारा जनता दर्शन कार्यक्रम में आने वाले सभी लोगों तथा कुछ खास समूहों जैसे दिव्यांगों, वरिष्ठ नागरिकों व महिलाओं की समस्याओं को विशेष वरीयता दी जाती है |
+                    <!-- Campaign Item End -->
+                    <!-- Campaign Item Start -->
+                    <div class="campaign-item active">
+                        <div class="campaign-image">
+                            <img src="/AssetsNew/images/campaign-1.jpg" alt="">
+                        </div>
+                        <div class="campaign-content">
+                            <div class="campaign-icon">
+                                <img src="/AssetsNew/images/icon-campaign-2.svg" alt="">
                             </div>
-                            <a href="/Home/About" class="pbmit-btn pbmit-btn-hover-secondary">
-                                <span>हमारे बारे में</span>
-                            </a>
+                            <div class="campaign-content-info">
+                                <h3>स्वास्थ्य सेवा</h3>
+                                <p>हर व्यक्ति के लिए सस्ती और सुलभ स्वास्थ्य सेवा की वकालत करना, यह सुनिश्चित करना कि गुणवत्तापूर्ण चिकित्सा सेवाएं एक अधिकार हो, विशेषाधिकार नहीं।</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Campaign Item End -->
+                    <!-- Campaign Item Start -->
+                    <div class="campaign-item">
+                        <div class="campaign-image">
+                            <img src="/AssetsNew/images/campaign-1.jpg" alt="">
+                        </div>
+                        <div class="campaign-content">
+                            <div class="campaign-icon">
+                                <img src="/AssetsNew/images/icon-campaign-3.svg" alt="">
+                            </div>
+                            <div class="campaign-content-info">
+                                <h3>सामाजिक न्याय</h3>
+                                <p>समानता, मानवाधिकारों और सामाजिक कार्यक्रमों की वकालत करना जो हाशिए के समुदायों को उठाते हैं और एक अधिक समावेशी समाज बनाते हैं।</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Campaign Item End -->
+                    <!-- Campaign Item Start -->
+                    <div class="campaign-item">
+                        <div class="campaign-image">
+                            <img src="/AssetsNew/images/campaign-1.jpg" alt="">
+                        </div>
+                        <div class="campaign-content">
+                            <div class="campaign-icon">
+                                <img src="/AssetsNew/images/icon-campaign-4.svg" alt="">
+                            </div>
+                            <div class="campaign-content-info">
+                                <h3>विदेश नीति</h3>
+                                <p>राष्ट्रीय सुरक्षा और वैश्विक स्थिरता सुनिश्चित करने के लिए शांति, कूटनीति और सहयोग पर आधारित विदेश नीति को बढ़ावा देना।</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Campaign Item End -->
+                    <!-- Campaign Item Start -->
+                    <div class="campaign-item">
+                        <div class="campaign-image">
+                            <img src="/AssetsNew/images/campaign-1.jpg" alt="">
+                        </div>
+                        <div class="campaign-content">
+                            <div class="campaign-icon">
+                                <img src="/AssetsNew/images/icon-campaign-5.svg" alt="">
+                            </div>
+                            <div class="campaign-content-info">
+                                <h3>शिक्षा सुधार</h3>
+                                <p>सभी छात्रों के लिए गुणवत्तापूर्ण शिक्षा, कौशल विकास और अवसर प्रदान करने के लिए शिक्षा प्रणाली में सुधार करके हमारे भविष्य में निवेश करना।</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Campaign Item End -->
+                    <!-- Campaign Item Start -->
+                    <div class="campaign-item">
+                        <div class="campaign-image">
+                            <img src="/AssetsNew/images/campaign-1.jpg" alt="">
+                        </div>
+                        <div class="campaign-content">
+                            <div class="campaign-icon">
+                                <img src="/AssetsNew/images/icon-campaign-6.svg" alt="">
+                            </div>
+                            <div class="campaign-content-info">
+                                <h3>परिवार और समुदाय</h3>
+                                <p>परिवारों, सामुदायिक कार्यक्रमों और पहलों का समर्थन करके हमारे समाज के ताने-बाने को मजबूत करना जो अपनेपन और देखभाल की भावना को बढ़ावा देते हैं।</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Campaign Item End -->
+                </div>
+                <!-- Campaign List End -->
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Our Campaign Section End -->
+<!-- Our Supporters Section Start -->
+<div class="our-supporters parallaxie">
+    <div class="container">
+        <div class="row section-row">
+            <div class="col-lg-12">
+                <!-- Supporters Content Start -->
+                <div class="supporters-content">
+                    <!-- Section Title Strat -->
+                    <div class="section-title dark-section">
+                        <!-- <h3 class="wow fadeInUp">स्वयंसेवक बनें</h3> -->
+                        <h2 class="text-anime-style-2" data-cursor="-opaque">हमारा अभियान <span>आप लोगों के समर्थकों</span> के योगदान से संचालित होता है</h2>
+                    </div>
+                    <!-- Section Title End -->
+                    <!-- Supporters Button Start -->
+                    <div class="supporters-btn wow fadeInUp" data-wow-delay="0.2s">
+                        <a href="/Home/Contact" class="btn-default btn-highlighted">अभी जुड़ें</a>
+                    </div>
+                    <!-- Supporters Button End -->
+                </div>
+                <!-- Supporters Content End -->
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- Supporters Counter List Start -->
+                <div class="supporters-counter-list">
+                    <!-- Supporters Counter Item Start -->
+                    <div class="supporters-counter-item">
+                        <img src="/AssetsNew/images/icon-supporter-1.svg" alt="">
+                        <h2><span class="counter">05</span>K +</h2>
+                        <p>सक्रिय स्वयंसेवक</p>
+                    </div>
+                    <!-- Supporters Counter Item End -->
+                    <!-- Supporters Counter Item Start -->
+                    <div class="supporters-counter-item">
+                        <img src="/AssetsNew/images/icon-supporter-2.svg" alt="">
+                        <h2><span class="counter">500</span>+</h2>
+                        <p>अभियान पूरे हुए</p>
+                    </div>
+                    <!-- Supporters Counter Item End -->
+                    <!-- Supporters Counter Item Start -->
+                    <div class="supporters-counter-item">
+                        <img src="/AssetsNew/images/icon-supporter-3.svg" alt="">
+                        <h2><span class="counter">750</span>+</h2>
+                        <p>क्षेत्र कवरेज</p>
+                    </div>
+                    <!-- Supporters Counter Item End -->
+                    <!-- Supporters Counter Item Start -->
+                    <div class="supporters-counter-item">
+                        <img src="/AssetsNew/images/icon-supporter-4.svg" alt="">
+                        <h2><span class="counter">100</span> +</h2>
+                        <p>परियोजनाएं पूरी हुईं</p>
+                    </div>
+                    <!-- Supporters Counter Item End -->
+                </div>
+                <!-- Supporters Counter List End -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Our Supporters Section End -->
+<!-- Our Achievement Section Start -->
+<div class="our-achievements">
+    <div class="container">
+        <div class="row section-row align-items-center">
+            <div class="col-lg-6">
+                <div class="section-title section-title-left">
+                    <h3 class="wow fadeInUp">हमारी उपलब्धियां</h3>
+                    <h2 class="text-anime-style-2" data-cursor="-opaque">प्रगति के <span>मील के पत्थर</span> का जश्न</h2>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="section-title-content wow fadeInUp" data-wow-delay="0.2s">
+                    <p>हर उपलब्धि एक बेहतर भविष्य की ओर एक कदम है। प्रभावशाली नीतियों से लेकर सामुदायिक जीत तक, हमारी यात्रा सफलता के क्षणों से भरी है। ये मील के पत्थर न्याय, विकास और जनसेवा के प्रति हमारी प्रतिबद्धता को दर्शाते हैं।</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="achievement-images">
+                    <div class="achievement-img-1">
+                        <figure class="image-anime reveal">
+                            <img src="/AssetsNew/images/achievement-img-1.jpg" alt="">
+                        </figure>
+                    </div>
+                    <div class="achievement-img-2">
+                        <figure class="image-anime reveal">
+                            <img src="/AssetsNew/images/achievement-img-2.jpg" alt="">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="achievement-list-box">
+                    <div class="achievement-list-item wow fadeInUp">
+                        <div class="achievement-item">
+                            <div class="icon-box">
+                                <img src="/AssetsNew/images/icon-achievement-1.svg" alt="">
+                            </div>
+                            <div class="achievement-item-content">
+                                <p>50,000+ निवासियों के लिए स्वास्थ्य सेवा पहुंच का विस्तार</p>
+                                <h3>2015</h3>
+                            </div>
+                        </div>
+                        <div class="achievement-button">
+                            <a href="about.html"><img src="/AssetsNew/images/arrow-primary.svg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="achievement-list-item wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="achievement-item">
+                            <div class="icon-box">
+                                <img src="/AssetsNew/images/icon-achievement-2.svg" alt="">
+                            </div>
+                            <div class="achievement-item-content">
+                                <p>किफायती आवास पहल सफलतापूर्वक पूरी हुई</p>
+                                <h3>2018</h3>
+                            </div>
+                        </div>
+                        <div class="achievement-button">
+                            <a href="about.html"><img src="/AssetsNew/images/arrow-primary.svg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="achievement-list-item wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="achievement-item">
+                            <div class="icon-box">
+                                <img src="/AssetsNew/images/icon-achievement-3.svg" alt="">
+                            </div>
+                            <div class="achievement-item-content">
+                                <p>5,000+ छात्रों के लिए शैक्षिक छात्रवृत्ति</p>
+                                <h3>2020</h3>
+                            </div>
+                        </div>
+                        <div class="achievement-button">
+                            <a href="about.html"><img src="/AssetsNew/images/arrow-primary.svg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="achievement-list-item wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="achievement-item">
+                            <div class="icon-box">
+                                <img src="/AssetsNew/images/icon-achievement-4.svg" alt="">
+                            </div>
+                            <div class="achievement-item-content">
+                                <p>25,000+ आपदा पीड़ितों को आपातकालीन राहत प्रदान की गई</p>
+                                <h3>2024</h3>
+                            </div>
+                        </div>
+                        <div class="achievement-button">
+                            <a href="about.html"><img src="/AssetsNew/images/arrow-primary.svg" alt=""></a>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- About End -->
+        </div>
+    </div>
+</div>
+<!-- Our Achievement Section End -->
 
 
-
-        <!-- Service Start -->
-        <section class="section-lg">
-            <div class="home1-service-section container-fluid">
-                <div class="row">
-                    <div class="col-xl-4 col-lg-12 service-tbox-left home1-service-arrow">
-                        <div class="pbmit-heading-subheading text-left">
-                            <h2 class="pbmit-title text-white">
-                                हमारी फोटो गैलरी
-                            </h2>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-8 col-lg-12">
-                        <div class="swiper-slider" data-autoplay="false" data-dots="false" data-arrows="true"
-                             data-arrows-class="home1-service-arrow" data-columns="3" data-margin="30" data-effect="slide">
-                            <div class="swiper-wrapper">
-                                @if (Model != null)
-                                {
-                                    if (Model.lstgallery != null)
-                                    {
-                                        int i = 0;
-                                        foreach (var item in Model.lstgallery)
-                                        {
-                                            <div class="swiper-slide">
-                                                <article class="pbmit-service-style-2">
-                                                    <div class="pbminfotech-post-item">
-                                                        <div class="pbmit-service-img-wrapper">
-                                                            <div class="pbmit-featured-wrapper">
-                                                                <a href="/Home/Gallery">
-                                                                    <img src="@item.GalleryImage" class="img-fluid gallery_img"
-                                                                         alt="Political_Image">
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                            </div>
-                                            i++;
-                                        }
-                                    }
-                                }
-                            </div>
-                        </div>
-                    </div>
+<div id="gallery-swiper-unique" class="our-gallery">
+    <div class="container">
+        <div class="row section-row mb-1">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <h2 class="text-anime-style-2" data-cursor="-opaque">हमारी फोटो   <span>गैलरी</span></h2>
                 </div>
             </div>
-        </section>
-        <!-- Service End -->
-        <!-- Future Start -->
-        <section class="section-lgb pbmit-bg-color-light">
-            <div class="container">
-                <div class="pbmit-heading-subheading text-center pt-5">
-                    <h2 class="pbmit-title">हमारे राजनीतिक भविष्य में भाग लें</h2>
-                </div>
-                <div class="row">
-                    @if (Model != null)
+        </div>
+
+        <!-- Swiper wrapper -->
+        <div class="swiper myGallerySwiper">
+            <div class="swiper-wrapper gallery-items">
+                @if (Model.lstgallery != null && Model.lstgallery.Count > 0)
+                {
+                    foreach (var item in Model.lstgallery)
                     {
-                        if (Model.lstevent != null)
-                        {
-                            int i = 0;
-                            foreach (var item in Model.lstevent)
-                            {
-                                <div class="col-xl-6 col-lg-12">
-                                    <div class="wpem-event-action-url event-style-color tour">
-                                        <div class="wpem-event-banner">
-                                            <div class="wpem-event-banner-img"
-                                                 style="background-image: url('@item.EventImage')">
-                                                <div class="wpem-event-date">
-                                                    <div class="wpem-event-date-type">
-                                                        <div class="wpem-from-date">
-                                                            <div class="wpem-date">29</div>
-                                                            <div class="wpem-month">Jul</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="wpem-event-infomation">
-                                            <div class="wpem-event-date">
-                                                <div class="wpem-event-date-type">
-                                                    <div class="wpem-from-date">
-                                                        <div class="wpem-date">29</div>
-                                                        <div class="wpem-month">Jul</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="wpem-event-details">
-                                                <div class="wpem-event-title">
-                                                    <h3 class="wpem-heading-text">
-                                                        <a href="#">@item.Discription</a>
-                                                    </h3>
-                                                </div>
-                                                <div class="pbmit-event-meta">
-                                                    <div class="wpem-event-location">
-                                                        <span class="wpem-event-location-text">@item.Town_Village @item.City</span>
-                                                    </div>
-                                                    <div class="wpem-event-date-time">
-                                                        <span class="wpem-event-date-time-text">@item.Date</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="pbmit-event-arrow-link">
-                                            <a href="#" class="event-style-color tour"></a>
-                                        </div>
+                        <!-- Gallery Slide Start -->
+                        <div class="swiper-slide col-lg-3 col-6">
+
+                            <div class="photo-gallery wow fadeInUp">
+
+                                <a href="@Url.Content(item.GalleryImage)"
+                                   data-cursor-text="View">
+
+                                    <figure class="image-anime">
+
+                                        <img src="@Url.Content( item.GalleryImage)"
+                                             alt="@item.Discription">
+
+                                    </figure>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+                        <!-- Gallery Slide End -->
+                    }
+                }
+
+
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Our Testimonial Section Start -->
+<div class="our-testimonial">
+    <div class="container">
+        <div class="row section-row">
+            <div class="col-lg-12">
+                <!-- Section Title Strat -->
+                <div class="section-title dark-section">
+                    <h3 class="wow fadeInUp text-dark">लोगों की राय</h3>
+                    <h2 class="text-anime-style-2" data-cursor="-opaque">
+                        हमारे बारे में लोगों की बातें, <span class="text-dark">उनका भरोसा और अनुभव</span>
+                    </h2>
+                </div>
+                <!-- Section Title End -->
+            </div>
+        </div>
+
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <!-- Testimonial Slider Start -->
+                <div class="testimonial-slider">
+                    <div class="swiper">
+                        <div class="swiper-wrapper" data-cursor-text="Drag">
+                            <!-- Testimonial Slide Start -->
+                            <div class="swiper-slide">
+                                <div class="testimonial-item">
+                                    <div class="testimonial-quote">
+                                        <img src="/AssetsNew/images/testimonial-quote.png" alt="">
+                                    </div>
+                                    <div class="testimonial-content">
+                                        <p>
+                                            मैंने प्रत्यक्ष रूप से देखा है कि इस पहल का स्थानीय परिवारों पर कितना
+                                            सकारात्मक प्रभाव पड़ा है। शिक्षा और अवसर पर उनका ध्यान कई लोगों के लिए
+                                            दरवाजे खोल गया है। मैं उनकी कड़ी मेहनत और प्रतिबद्धता के लिए आभारी हूँ।
+                                        </p>
+                                    </div>
+                                    <div class="testimonial-rating">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <div class="author-content">
+                                        <p>राजेश कुमार <span>समाजसेवी</span></p>
                                     </div>
                                 </div>
-                                i++;
-                            }
-                        }
-                    }
-                </div>
-            </div>
-        </section>
-        <!-- Future End -->
-        <!-- Portfolio Start -->
-        <section class="section-lg">
-            <div class="pbmit-heading-subheading text-center">
-                <h2 class="pbmit-title"> नवीनतम समाचार और प्रेस</h2>
-            </div>
-            <div class="container">
-                <div class="swiper-slider" data-autoplay="false" data-dots="true" data-arrows="false" data-columns="1"
-                     data-margin="" data-effect="slide">
-                    <div class="swiper-wrapper">
-                        @if (Model != null)
-                        {
-                            if (Model.lstNews != null)
-                            {
-                                int i = 0;
-                                foreach (var item in Model.lstNews)
-                                {
-
-                                    <div class="swiper-slide">
-                                        <!-- Slide1 -->
-                                        <article class="pbmit-static-box-style-1">
-                                            <div class="pbmit-imgbox col-md-6 col-sm-12"
-                                                 style="background-image:url('@item.NewsImage')">
-                                                <div class="pbmit-imgbox-wrapper">
-                                                    <img src="@item.NewsImage" class="news_img" alt="Political Commentator" />
-                                                </div>
-                                            </div>
-                                            <div class="pbmit-contentbox col-md-6 col-sm-12">
-                                                <div class="pbminfotech-box-number">
-                                                    <h4>@item.Year</h4>
-                                                </div>
-                                                <div class="pbminfotech-box-title">
-                                                    <h4>Political Commentator</h4>
-                                                </div>
-                                                <div class="pbminfotech-static-box-desc">
-                                                    @item.Discription
-                                                </div>
-                                            </div>
-                                        </article>
+                            </div>
+                            <!-- Testimonial Slide End -->
+                            <!-- Testimonial Slide Start -->
+                            <div class="swiper-slide">
+                                <div class="testimonial-item">
+                                    <div class="testimonial-quote">
+                                        <img src="/AssetsNew/images/testimonial-quote.png" alt="">
                                     </div>
-                                    i++;
-                                }
-                            }
-                        }
+                                    <div class="testimonial-content">
+                                        <p>
+                                            इस अभियान ने हमारे क्षेत्र में शिक्षा और स्वास्थ्य के क्षेत्र में जो काम
+                                            किया है, वह वाकई प्रशंसनीय है। सुरेछ चौरसिया जी की ईमानदारी और जनता के
+                                            प्रति समर्पण ने हम सभी को प्रेरित किया है।
+                                        </p>
+                                    </div>
+                                    <div class="testimonial-rating">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <div class="author-content">
+                                        <p>सुनीता देवी <span>प्रधानाध्यापिका</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Testimonial Slide End -->
+                            <!-- Testimonial Slide Start -->
+                            <div class="swiper-slide">
+                                <div class="testimonial-item">
+                                    <div class="testimonial-quote">
+                                        <img src="/AssetsNew/images/testimonial-quote.png" alt="">
+                                    </div>
+                                    <div class="testimonial-content">
+                                        <p>
+                                            युवा संवाद कार्यक्रम ने हमें अपनी बात कहने का एक मंच दिया है। सुरेछ
+                                            चौरसिया जी ने युवाओं की आवाज़ को गंभीरता से सुना है और हमें विश्वास है
+                                            कि वे हमारे भविष्य को बेहतर बनाएंगे।
+                                        </p>
+                                    </div>
+                                    <div class="testimonial-rating">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <div class="author-content">
+                                        <p>अमित यादव <span>युवा नेता</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Testimonial Slide End -->
+                        </div>
+                        <div class="testimonial-pagination"></div>
                     </div>
                 </div>
+                <!-- Testimonial Slider End -->
             </div>
-        </section>
-        <!-- Portfolio End -->
+
+            <div class="col-lg-6">
+                <!-- Testimonial Image Start -->
+                <div class="testimonial-image">
+                    <img src="/AssetsNew/images/testimonial-image.png" alt="">
+                </div>
+                <!-- Testimonial Image End -->
+            </div>
+        </div>
     </div>
-    <!-- Page Content End -->
 </div>
-<!-- page wrapper End -->
+<!-- Our Testimonial Section End -->
+<!-- Our Ability Section Start -->
+<div class="our-ability">
+    <div class="container">
+        <div class="row section-row">
+            <div class="col-lg-12">
+                <!-- Section Title Start -->
+                <div class="section-title">
+                    <h3 class="wow fadeInUp">हमारी क्षमता</h3>
+                    <h2 class="text-anime-style-2" data-cursor="-opaque">जनसेवा में क्षमता: <span>हर समस्या का</span> समाधान</h2>
+                </div>
+                <!-- Section Title End -->
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- Ability Content Start -->
+                <div class="ability-content tab-content" id="ability_tab">
+                    <!-- Ability Nav start -->
+                    <div class="ability-nav wow fadeInUp" data-wow-delay="0.2s">
+                        <ul class="nav nav-tabs" id="abilityTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="administration-tab" data-bs-toggle="tab" data-bs-target="#administration" type="button" role="tab" aria-selected="true">जनसेवा एवं प्रशासन</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="human-rights-tab" data-bs-toggle="tab" data-bs-target="#human_rights" type="button" role="tab" aria-selected="false">समाजिक न्याय एवं अधिकार</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="relations-tab" data-bs-toggle="tab" data-bs-target="#relations" type="button" role="tab" aria-selected="false">विकास एवं जनकल्याण</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Ability Nav End -->
+                    <!-- Ability Tab Item Start - जनसेवा एवं प्रशासन -->
+                    <div class="ability-tab-item tab-pane fade show active" id="administration" role="tabpanel">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <!-- Ability Tab Content Start -->
+                                <div class="ability-tab-content">
+                                    <div class="section-title">
+                                        <h2 data-cursor="-opaque">जनता की सेवा ही सच्ची राजनीति है</h2>
+                                        <p>सुरेछ चौरसिया का मानना है कि राजनीति का उद्देश्य जनता की सेवा करना है। हर फैसला, हर नीति जनता के कल्याण के लिए होनी चाहिए। हम पारदर्शी प्रशासन और जवाबदेही के माध्यम से लोगों की समस्याओं का समाधान करने के लिए प्रतिबद्ध हैं।</p>
+                                    </div>
+                                    <div class="ability-content-list">
+                                        <ul>
+                                            <li>हर योजना का लाभ अंतिम व्यक्ति तक पहुँचाना</li>
+                                            <li>पारदर्शी और जवाबदेह प्रशासन सुनिश्चित करना</li>
+                                            <li>ग्रामीण विकास और बुनियादी ढाँचे को मजबूत करना</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- Ability Tab Content End -->
+                            </div>
+
+                            <div class="col-lg-6">
+                                <!-- Ability Tab Image Start -->
+                                <div class="ability-tab-image">
+                                    <figure class="image-anime">
+                                        <img src="/AssetsNew/images/ability-img.jpg" alt="">
+                                    </figure>
+                                </div>
+                                <!-- Ability Tab Image End -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Ability Tab Item End -->
+                    <!-- Ability Tab Item Start - समाजिक न्याय एवं अधिकार -->
+                    <div class="ability-tab-item tab-pane fade" id="human_rights" role="tabpanel">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <!-- Ability Tab Content Start -->
+                                <div class="ability-tab-content">
+                                    <div class="section-title">
+                                        <h2 data-cursor="-opaque">हर व्यक्ति को मिले सम्मान, समानता और न्याय</h2>
+                                        <p>सुरेछ चौरसिया समाज के हर वर्ग, विशेषकर महिलाओं, युवाओं और कमजोर वर्गों के अधिकारों के लिए प्रतिबद्ध हैं। हमारा प्रयास है कि कोई भी व्यक्ति भेदभाव का शिकार न हो और हर किसी को विकास के समान अवसर मिलें।</p>
+                                    </div>
+                                    <div class="ability-content-list">
+                                        <ul>
+                                            <li>महिला सशक्तिकरण और बेटी बचाओ-बेटी पढ़ाओ अभियान</li>
+                                            <li>अनुसूचित जाति/जनजाति और पिछड़ा वर्ग का उत्थान</li>
+                                            <li>हर व्यक्ति के लिए समान अवसर और अधिकार</li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                                <!-- Ability Tab Content End -->
+                            </div>
+
+                            <div class="col-lg-6">
+                                <!-- Ability Tab Image Start -->
+                                <div class="ability-tab-image">
+                                    <figure class="image-anime">
+                                        <img src="/AssetsNew/images/ability-img2.jpg" alt="">
+                                    </figure>
+                                </div>
+                                <!-- Ability Tab Image End -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Ability Tab Item End -->
+                    <!-- Ability Tab Item Start - विकास एवं जनकल्याण -->
+                    <div class="ability-tab-item tab-pane fade" id="relations" role="tabpanel">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <!-- Ability Tab Content Start -->
+                                <div class="ability-tab-content">
+                                    <div class="section-title">
+                                        <h2 data-cursor="-opaque">विकास के लिए साझा प्रयास, समृद्धि के लिए साझा संकल्प</h2>
+                                        <p>सुरेछ चौरसिया का विजन है कि विकास सिर्फ शहरों तक सीमित न हो, बल्कि हर गाँव, हर मोहल्ला तक पहुँचे। हम शिक्षा, स्वास्थ्य, कृषि, रोजगार और बुनियादी सुविधाओं के क्षेत्र में ठोस कार्य कर रहे हैं ताकि हर व्यक्ति समृद्धि का हिस्सा बने।</p>
+                                    </div>
+                                    <div class="ability-content-list">
+                                        <ul>
+                                            <li>गाँव से गरीबी हटाओ, विकास लाओ</li>
+                                            <li>युवाओं को रोजगार और आत्मनिर्भर बनाना</li>
+                                            <li>डिजिटल भारत और आधुनिक कृषि को बढ़ावा देना</li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                                <!-- Ability Tab Content End -->
+                            </div>
+
+                            <div class="col-lg-6">
+                                <!-- Ability Tab Image Start -->
+                                <div class="ability-tab-image">
+                                    <figure class="image-anime">
+                                        <img src="/AssetsNew/images/ability-img3.jpg" alt="">
+                                    </figure>
+                                </div>
+                                <!-- Ability Tab Image End -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Ability Tab Item End -->
+                </div>
+                <!-- Ability Content End -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Our Activity Section Start -->
+<div class="our-activity">
+    <div class="container-fluid">
+        <div class="row no-gutters">
+            <div class="col-lg-6">
+                <!-- Activity Video Box Start -->
+                <div class="activity-video-box parallaxie">
+                    <!-- Activity Title Start -->
+                    <div class="activity-title wow fadeInUp">
+                        <h2>हमारी गतिविधियों का समर्थन करें</h2>
+                    </div>
+                    <div class="supporters-btn mt-0 wow fadeInUp" data-wow-delay="0.2s">
+                        <a href="/Home/Contact" class="btn-default btn-highlighted">अभी जुड़ें</a>
+                    </div>
+                    <!-- Activity Title End -->
+                    <!-- Video Play Button Start -->
+                    <!-- <div class="video-play-button">
+                        <a href="https://www.youtube.com/watch?v=Y-x0efG1seA" class="popup-video" data-cursor-text="Play">
+                            <i class="fa-solid fa-play"></i>
+                        </a>
+                    </div> -->
+                    <!-- Video Play Button End -->
+                </div>
+                <!-- Activity Video Box End -->
+            </div>
+
+            <div class="col-lg-6">
+                <!-- Activity Content List Start -->
+                <div class="activity-content-list">
+                    <!-- Activity Item Item Start -->
+                    <div class="activity-list-item">
+                        <!-- Activity Content Box Start -->
+                        <div class="activity-content-box">
+                            <div class="icon-box">
+                                <img src="/AssetsNew/images/icon-activity-1.svg" alt="">
+                            </div>
+                            <div class="activity-content">
+                                <h3>सामाजिक मुद्दे</h3>
+                                <p>असमानता और गरीबी से लेकर स्वास्थ्य सेवा और जलवायु परिवर्तन तक, इन मुद्दों के लिए सामूहिक कार्रवाई और स्थायी बदलाव लाने के लिए साझा प्रतिबद्धता की आवश्यकता है।</p>
+                            </div>
+                        </div>
+                        <!-- Activity Content Box End -->
+                        <!-- Activity Image Start -->
+                        <div class="activity-image">
+                            <figure class="image-anime">
+                                <img src="/AssetsNew/images/activity-image-1.jpg" alt="">
+                            </figure>
+                        </div>
+                        <!-- Activity Image End -->
+                    </div>
+                    <!-- Activity Item Item End -->
+                    <!-- Activity Item Item Start -->
+                    <div class="activity-list-item">
+                        <!-- Activity Content Box Start -->
+                        <div class="activity-content-box">
+                            <div class="icon-box">
+                                <img src="/AssetsNew/images/icon-activity-2.svg" alt="">
+                            </div>
+                            <div class="activity-content">
+                                <h3>पर्यावरण सुरक्षा</h3>
+                                <p>असमानता और गरीबी से लेकर स्वास्थ्य सेवा और जलवायु परिवर्तन तक, इन मुद्दों के लिए सामूहिक कार्रवाई और स्थायी बदलाव लाने के लिए साझा प्रतिबद्धता की आवश्यकता है।</p>
+                            </div>
+                        </div>
+                        <!-- Activity Content Box End -->
+                        <!-- Activity Image Start -->
+                        <div class="activity-image">
+                            <figure class="image-anime">
+                                <img src="/AssetsNew/images/activity-image-2.jpg" alt="">
+                            </figure>
+                        </div>
+                        <!-- Activity Image End -->
+                    </div>
+                    <!-- Activity Item Item End -->
+                </div>
+                <!-- Activity Content list End -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Our Activity Section End -->
+<!-- Our Blog Section Start -->
+<div class="our-blog">
+    <div class="container">
+        <div class="row section-row align-items-center">
+            <div class="col-lg-6">
+                <!-- Section Title Start -->
+                <div class="section-title section-title-left">
+                    <!-- <h3 class="wow fadeInUp">नवीनतम पोस्ट</h3> -->
+                    <h2 class="text-anime-style-2" style="text-transform: capitalize;" data-cursor="-opaque">नवीनतम समाचार  <span>और प्रेस</span> </h2>
+                </div>
+                <!-- Section Title End -->
+            </div>
+
+            <div class="col-lg-6">
+                <!-- Section Title Content Start -->
+                <div class="section-title-content wow fadeInUp" data-wow-delay="0.4s">
+                    <p>नवीनतम समाचारों, अंतर्दृष्टियों और घटनाक्रमों के साथ अपडेट रहें। हमारे पोस्ट नीति परिवर्तनों और सामाजिक मुद्दों से लेकर सामुदायिक पहलों और आगामी कार्यक्रमों तक सब कुछ कवर करते हैं।</p>
+                </div>
+                <!-- Section Title Content End -->
+            </div>
+        </div>
+
+        <div class="row">
+            @if (Model.lstNews != null && Model.lstNews.Count > 0)
+            {
+                foreach (var item in Model.lstNews)
+                {
+                    <div class="col-lg-4 col-md-6">
+
+                        <div class="post-item wow fadeInUp">
+
+                            <!-- Image -->
+                            <div class="post-featured-image">
+
+                                <a href="#!" data-cursor-text="View">
+
+                                    <figure class="image-anime">
+
+                                        <img src="@Url.Content(item.NewsImage)"
+                                             alt="@item.Discription">
+
+                                    </figure>
+
+                                </a>
+
+                            </div>
 
 
+                            <!-- Body -->
+                            <div class="blog-item-body">
+
+                                <!-- Title -->
+                                <div class="post-item-content">
+
+                                    <h2>
+                                        <a href="#!">
+                                            @item.Discription
+                                        </a>
+                                    </h2>
+
+                                    <p>
+                                        @item.Message
+                                    </p>
+
+                                    @*<small>
+                                            @item.Date @item.Year
+                                        </small>*@
+
+                                </div>
+
+
+                                <!-- Read More -->
+                                <div class="blog-item-btn">
+
+                                    <a href="#!" class="readmore-btn">
+                                        और पढ़ें
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                }
+            }
+            else
+            {
+                <div class="col-12 text-center">
+                    <p>अभी कोई समाचार उपलब्ध नहीं है।</p>
+                </div>
+            }
+
+        </div>
+    </div>
+</div>
+<!-- Our Blog Section End -->
