@@ -19,6 +19,16 @@ namespace PoliticalWebsite.Models
         public string Pk_SliderBannerId { get; set; }
         public string SliderBanner { get; set; }
         public string SliderBannerImage { get; set; }
+
+        // Dynamic Slider Text
+        public string Heading { get; set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public string ButtonText { get; set; }
+        public string ButtonUrl { get; set; }
+        public string FooterText { get; set; }
+
+
         public List<Master> lstSliderBanner { get; set; }
         #endregion
 
@@ -36,6 +46,7 @@ namespace PoliticalWebsite.Models
         public string EventImage { get; set; }
         public string Event { get; set; }
         public string Discription { get; set; }
+        public string EventHeading { get; set; }
         public List<Master> lstevent { get; set; }
         public string Date { get; set; }
         public string EventDate { get; set; }
@@ -66,15 +77,27 @@ namespace PoliticalWebsite.Models
 
         public DataSet SaveSliderBanner()
         {
-            SqlParameter[] para = {
-                    new SqlParameter("@SliderBannerImage", SliderBanner),
-                    new SqlParameter("@AddedBy", AddedBy)
+            SqlParameter[] para =
+            {
+        new SqlParameter("@SliderBannerImage", SliderBanner),
 
-            };
+        new SqlParameter("@Heading", Heading),
+        new SqlParameter("@Title", Title),
+        new SqlParameter("@Description", Description),
+        new SqlParameter("@ButtonText", ButtonText),
+        new SqlParameter("@ButtonUrl", ButtonUrl),
+        new SqlParameter("@FooterText", FooterText),
 
-            DataSet ds = Connection.ExecuteQuery("SaveSliderBanner", para);
+        new SqlParameter("@AddedBy", AddedBy)
+         };
+
+            DataSet ds =
+                Connection.ExecuteQuery("SaveSliderBanner", para);
+
             return ds;
         }
+
+
         public DataSet SliderBannerList()
         {
             SqlParameter[] para = { new SqlParameter("@Pk_SliderBannerId", SliderBannerID) };
@@ -161,6 +184,7 @@ namespace PoliticalWebsite.Models
             SqlParameter[] para = {
                     new SqlParameter("@EventImage", Event),
                     new SqlParameter("@Discription", Discription),
+                    new SqlParameter("@EventsHeading", EventHeading),
                     new SqlParameter("@City", City),
                     new SqlParameter("@Town_Village", Town_Village),
                     new SqlParameter("@Date", EventDate),

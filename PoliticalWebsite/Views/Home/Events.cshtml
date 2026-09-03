@@ -46,7 +46,7 @@
                                 <a href="@item.EventImage" data-cursor-text="View">
                                     <figure class="image-anime">
                                         <img src="@item.EventImage"
-                                             alt="@item.Discription">
+                                             alt="@item.EventsHeading">
                                     </figure>
                                 </a>
                             </div>
@@ -57,9 +57,9 @@
                                 <!-- Post Item Content Start -->
                                 <div class="post-item-content">
                                     <h2>
-                                        <a href="@item.EventImage">
-                                            @item.Discription
-                                        </a>
+                                       
+                                            @item.EventsHeading
+                                        
                                     </h2>
                                 </div>
                                 <!-- Post Item Content End -->
@@ -90,12 +90,12 @@
                                     </div>*@
 
                                 <!-- Blog Item Button Start -->
-                                <div class="blog-item-btn">
-                                    <a href="@item.EventImage"
-                                       class="readmore-btn">
-                                        और पढ़ें
-                                    </a>
-                                </div>
+                            <div class="blog-item-btn">
+                                <a href="/Home/EventDetails?id=@item.Pk_EventId"
+                                   class="readmore-btn">
+                                    और पढ़ें
+                                </a>
+                            </div>
                                 <!-- Blog Item Button End -->
 
                             </div>

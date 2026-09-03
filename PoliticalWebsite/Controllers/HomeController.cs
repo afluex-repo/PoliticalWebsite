@@ -14,6 +14,9 @@ namespace PoliticalWebsite.Controllers
         // GET: Home
         public ActionResult Index(Home model)
         {
+            
+            
+            
             List<Home> lst = new List<Home>();
             DataSet ds = model.GalleryimageList();
 
@@ -48,6 +51,7 @@ namespace PoliticalWebsite.Controllers
                     obj.Pk_EventId = r["Pk_EventId"].ToString();
                     obj.EventImage = r["EventImage"].ToString();
                     obj.Discription = r["Discription"].ToString();
+                    obj.EventsHeading = r["EventsHeading"].ToString();
                     obj.Date = r["Date"].ToString();
                     obj.City = r["City"].ToString();
                     obj.Town_Village = r["Town_Village"].ToString();
@@ -80,11 +84,37 @@ namespace PoliticalWebsite.Controllers
 
             if (ds3 != null && ds3.Tables.Count > 0 && ds3.Tables[0].Rows.Count > 0)
             {
+               
+
                 foreach (DataRow r in ds3.Tables[0].Rows)
                 {
                     Home obj = new Home();
-                    obj.Pk_SliderBannerId = r["Pk_SliderBannerId"].ToString();
-                    obj.SliderBannerImage = r["SliderBannerImage"].ToString();
+
+                    obj.Pk_SliderBannerId =
+                        r["Pk_SliderBannerId"].ToString();
+
+                    obj.SliderBannerImage =
+                        r["SliderBannerImage"].ToString();
+
+                    // Dynamic Slider Text
+                    obj.Heading =
+                        r["Heading"].ToString();
+
+                    obj.Title =
+                        r["Title"].ToString();
+
+                    obj.Description =
+                        r["Description"].ToString();
+
+                    obj.ButtonText =
+                        r["ButtonText"].ToString();
+
+                    obj.ButtonUrl =
+                        r["ButtonUrl"].ToString();
+
+                    obj.FooterText =
+                        r["FooterText"].ToString();
+
                     lst3.Add(obj);
                 }
                 model.lstSliderBanner = lst3;
@@ -93,11 +123,15 @@ namespace PoliticalWebsite.Controllers
             return View(model);
         }
 
+
+
         public ActionResult Login()
         {
             Session.Abandon();
             return View();
         }
+
+
 
         [HttpPost]
         public ActionResult LoginAction(Home obj)
@@ -239,6 +273,7 @@ namespace PoliticalWebsite.Controllers
                     obj.Pk_EventId = r["Pk_EventId"].ToString();
                     obj.EventImage = r["EventImage"].ToString();
                     obj.Discription = r["Discription"].ToString();
+                    obj.EventsHeading = r["EventsHeading"].ToString();
                     obj.Date = r["Date"].ToString();
                     obj.City = r["City"].ToString();
                     obj.Town_Village = r["Town_Village"].ToString();
@@ -405,36 +440,7 @@ namespace PoliticalWebsite.Controllers
         [HttpPost]
         [ActionName("YouthConversation")]
      
-        //public ActionResult YouthConversation(YouthConversation model)
-        //{
-        //    try
-        //    {
-        //        model.AddedBy = "1";
-        //        DataSet ds = model.SaveYouthConversation();
-        //        if (ds != null && ds.Tables[0].Rows.Count > 0)
-        //        {
-        //            if (ds.Tables[0].Rows[0][0].ToString() == "1")
-        //            {
-        //                TempData["YouthConversation"] = "आपका युवा संवाद कार्यक्रम – पंजीकरण सफलतापूर्वक सहेज लिया गया है !!";
-        //            }
-        //            else if (ds.Tables[0].Rows[0][0].ToString() == "0")
-        //            {
-        //                TempData["YouthConversation"] = ds.Tables[0].Rows[0]["ErrorMessage"].ToString();
-        //            }
-        //        }
-        //        else
-        //        {
-        //            TempData["YouthConversation"] = ds.Tables[0].Rows[0]["ErrorMessage"].ToString();
-        //        }
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        TempData["YouthConversation"] = ex.Message;
-        //    }
-        //    TempData["FormSubmitted"] = true;
-        //    return RedirectToAction("YouthConversation", "Home");
-        //}
+       
 
         public ActionResult YouthConversation(YouthConversation model)
         {
@@ -510,6 +516,44 @@ namespace PoliticalWebsite.Controllers
 
             return View(model);
         }
+
+
+        public ActionResult EventDetails(string id)
+        {
+            Home model = new Home();
+
+            DataSet ds = model.EventimageList();
+
+            if (ds != null &&
+                ds.Tables.Count > 0 &&
+                ds.Tables[0].Rows.Count > 0)
+            {
+                foreach (DataRow r in ds.Tables[0].Rows)
+                {
+                    if (r["Pk_EventId"].ToString() == id)
+                    {
+                        model.Pk_EventId = r["Pk_EventId"].ToString();
+
+                        model.EventImage = r["EventImage"].ToString()
+                            .Replace("../", "/");
+
+                        model.Discription = r["Discription"].ToString();
+                        model.EventsHeading = r["EventsHeading"].ToString();
+
+                        model.Date = r["Date"].ToString();
+
+                        model.City = r["City"].ToString();
+
+                        model.Town_Village = r["Town_Village"].ToString();
+
+                        break;
+                    }
+                }
+            }
+
+            return View(model);
+        }
+
 
     }
 }

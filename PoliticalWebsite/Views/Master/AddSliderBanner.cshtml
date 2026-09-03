@@ -22,19 +22,88 @@
                         <label>Upload Slider Banner <span style="color: red">*</span></label><br />
                         <input type="file" id="SliderBanner" name="SliderBanner" class="form-control" />
                     </div>
+
                     <label>नोट: बैनर का साइज (ऊंचाई 626 पिक्सेल और चौड़ाई 1583 पिक्सेल) होनी चाहिए, जिससे बैनर सही दिखेगा ।</label>
+
+                    <div class="form-group">
+                        <label>Heading <span style="color:red">*</span></label>
+                        @Html.TextBoxFor(m => m.Heading, new
+                        {
+                            @class = "form-control",
+                            placeholder = "Enter heading"
+                        })
+                    </div>
+
+                    <div class="form-group">
+                        <label>Title <span style="color:red">*</span></label>
+                        @Html.TextBoxFor(m => m.Title, new
+                        {
+                            @class = "form-control",
+                            placeholder = "Enter title"
+                        })
+                    </div>
+
+                    <div class="form-group">
+                        <label>Description</label>
+                        @Html.TextAreaFor(m => m.Description, new
+                        {
+                            @class = "form-control",
+                            rows = "4",
+                            placeholder = "Enter description"
+                        })
+                    </div>
+
+                    <div class="form-group">
+                        <label>Button Text</label>
+                        @Html.TextBoxFor(m => m.ButtonText, new
+                        {
+                            @class = "form-control",
+                            placeholder = "अभियान में शामिल हों"
+                        })
+                    </div>
+
+                    <div class="form-group">
+                        <label>Button URL</label>
+                        @Html.TextBoxFor(m => m.ButtonUrl, new
+                        {
+                            @class = "form-control",
+                            placeholder = "/Home/Contact"
+                        })
+                    </div>
+
+                    <div class="form-group">
+                        <label>Footer Text</label>
+                        @Html.TextBoxFor(m => m.FooterText, new
+                        {
+                            @class = "form-control",
+                            placeholder = "Enter footer text"
+                        })
+                    </div>
+
                     <div class="form-group">
                         @Html.HiddenFor(m => m.Pk_SliderBannerId)
-                        @if (Model == null)
+                        @if (string.IsNullOrEmpty(Model.Pk_SliderBannerId))
                         {
-                            <input type="submit" id="btnSave" name="btnSave" class="btn btn-success pull-right" value="Save" onclick="return saveSliderBanner();" />
+                            <input type="submit"
+                                   id="btnSave"
+                                   name="btnSave"
+                                   class="btn btn-success pull-right"
+                                   value="Save"
+                                   onclick="return saveSliderBanner();" />
                         }
                         else
                         {
-                            <input type="submit" id="btnUpdate" name="btnUpdate" class="btn btn-success pull-right" value="Update" onclick="return saveSliderBanner();" />
+                            <input type="submit"
+                                   id="btnUpdate"
+                                   name="btnUpdate"
+                                   class="btn btn-success pull-right"
+                                   value="Update"
+                                   onclick="return saveSliderBanner();" />
                         }
                         <a href="/Master/SliderBannerList" class="btn btn-primary pull-right">Slider Banner List</a>
                     </div>
+
+
                 </div>
             </div>
         </div>
