@@ -29,7 +29,9 @@
                                                 <tr>
                                                     <th>S No.</th>
                                                     <th>Banner</th>
+                                                    <th>Events Heading</th>
                                                     <th>Description</th>
+                                                  
                                                     <th>City</th>
                                                     <th>Date</th>
                                                     <th>Action</th>
@@ -50,6 +52,7 @@
                                                                     <img src=@Html.DisplayFor(m => Item.EventImage) alt="Image" style="width:100px;height:80px;border-radius:0px" />
                                                                 </td>
 
+                                                                <td>@Item.EventHeading</td>
                                                                 <td>@Item.Discription</td>
                                                                 <td>@Item.City</td>
                                                                 <td>@Item.Date</td>

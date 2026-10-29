@@ -3,7 +3,7 @@
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>F:\SakshiPandey\Publish\PoliticalProject</_PublishTargetUrl>
-    <History>True|2026-09-03T08:52:41.1885221Z||;True|2026-09-03T14:20:49.0131513+05:30||;True|2026-09-03T14:02:35.2142057+05:30||;True|2026-09-03T12:44:53.9495476+05:30||;True|2026-09-02T16:21:16.1738973+05:30||;True|2026-09-02T16:12:51.3446365+05:30||;True|2026-08-24T17:34:38.7194585+05:30||;False|2026-08-24T17:33:20.6994612+05:30||;False|2026-08-24T17:29:43.2971297+05:30||;False|2026-08-19T11:33:59.2528171+05:30||;True|2026-08-13T17:59:40.7210828+05:30||;True|2026-08-13T17:59:18.4263100+05:30||;True|2026-08-13T17:47:48.2484080+05:30||;False|2026-08-13T17:46:41.9855020+05:30||;False|2026-08-13T17:32:49.0270954+05:30||;False|2026-08-13T17:20:03.2828914+05:30||;False|2026-08-13T17:17:08.4844021+05:30||;False|2026-08-13T17:16:29.4697899+05:30||;True|2025-05-06T11:25:29.9009376+05:30||;</History>
+    <History>True|2026-09-03T12:20:21.7741223Z||;True|2026-09-03T17:28:32.8484850+05:30||;True|2026-09-03T14:22:41.1885221+05:30||;True|2026-09-03T14:20:49.0131513+05:30||;True|2026-09-03T14:02:35.2142057+05:30||;True|2026-09-03T12:44:53.9495476+05:30||;True|2026-09-02T16:21:16.1738973+05:30||;True|2026-09-02T16:12:51.3446365+05:30||;True|2026-08-24T17:34:38.7194585+05:30||;False|2026-08-24T17:33:20.6994612+05:30||;False|2026-08-24T17:29:43.2971297+05:30||;False|2026-08-19T11:33:59.2528171+05:30||;True|2026-08-13T17:59:40.7210828+05:30||;True|2026-08-13T17:59:18.4263100+05:30||;True|2026-08-13T17:47:48.2484080+05:30||;False|2026-08-13T17:46:41.9855020+05:30||;False|2026-08-13T17:32:49.0270954+05:30||;False|2026-08-13T17:20:03.2828914+05:30||;False|2026-08-13T17:17:08.4844021+05:30||;False|2026-08-13T17:16:29.4697899+05:30||;True|2025-05-06T11:25:29.9009376+05:30||;</History>
     <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>
@@ -1265,13 +1265,13 @@
       <publishTime>08/11/2026 11:15:14</publishTime>
     </File>
     <File Include="bin/PoliticalWebsite.dll">
-      <publishTime>09/03/2026 14:22:38</publishTime>
+      <publishTime>09/03/2026 17:50:14</publishTime>
     </File>
     <File Include="bin/PoliticalWebsite.dll.config">
       <publishTime>08/11/2026 11:15:14</publishTime>
     </File>
     <File Include="bin/PoliticalWebsite.pdb">
-      <publishTime>09/03/2026 14:22:38</publishTime>
+      <publishTime>09/03/2026 17:50:14</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>08/11/2026 11:15:16</publishTime>
@@ -2024,13 +2024,13 @@
       <publishTime>08/11/2026 11:15:14</publishTime>
     </File>
     <File Include="Views/Master/AddSliderBanner.cshtml">
-      <publishTime>09/02/2026 18:25:12</publishTime>
+      <publishTime>09/03/2026 17:38:13</publishTime>
     </File>
     <File Include="Views/Master/ChangePassword.cshtml">
       <publishTime>08/11/2026 11:15:14</publishTime>
     </File>
     <File Include="Views/Master/EventimageList.cshtml">
-      <publishTime>08/11/2026 11:15:14</publishTime>
+      <publishTime>09/03/2026 17:42:27</publishTime>
     </File>
     <File Include="Views/Master/GalleryimageList.cshtml">
       <publishTime>08/11/2026 11:15:14</publishTime>

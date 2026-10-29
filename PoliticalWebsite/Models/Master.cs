@@ -105,19 +105,52 @@ namespace PoliticalWebsite.Models
             return ds;
         }
 
+        //public DataSet UpdateSliderBanner()
+        //{
+        //    SqlParameter[] para =
+        //    {
+        //        new SqlParameter("@SliderBannerID", SliderBannerID),
+        //        new SqlParameter("@SliderBannerImage", SliderBanner),
+        //        new SqlParameter("@Heading", Heading),
+        //        new SqlParameter("@Title", Title),
+        //        new SqlParameter("@Description", Description),
+        //        new SqlParameter("@ButtonText", ButtonText),
+        //        new SqlParameter("@ButtonUrl", ButtonUrl),
+        //        new SqlParameter("@FooterText", FooterText),
+        //        new SqlParameter("@UpdatedBy", AddedBy)
+        //    };
+
+        //    DataSet ds = Connection.ExecuteQuery("UpdateSliderBanner", para);
+
+        //    return ds;
+        //}
         public DataSet UpdateSliderBanner()
         {
-            SqlParameter[] para = {
-                    new SqlParameter("@SliderBannerID", SliderBannerID),
-                    new SqlParameter("@SliderBannerImage", SliderBanner),
-                    new SqlParameter("@UpdatedBy", AddedBy)
+            SqlParameter[] para =
+            {
+        new SqlParameter("@SliderBannerID", SliderBannerID),
+        new SqlParameter("@SliderBannerImage",
+            string.IsNullOrEmpty(SliderBanner)
+                ? (object)DBNull.Value
+                : SliderBanner),
 
-            };
+        new SqlParameter("@Heading", Heading),
+        new SqlParameter("@Title", Title),
+        new SqlParameter("@Description", Description),
+        new SqlParameter("@ButtonText", ButtonText),
+        new SqlParameter("@ButtonUrl", ButtonUrl),
+        new SqlParameter("@FooterText", FooterText),
 
-            DataSet ds = Connection.ExecuteQuery("UpdateSliderBanner", para);
+        new SqlParameter("@UpdatedBy", AddedBy)
+    };
+
+            DataSet ds = Connection.ExecuteQuery(
+                "UpdateSliderBanner",
+                para
+            );
+
             return ds;
         }
-
         public DataSet DeleteSliderBanner()
         {
             SqlParameter[] para = { new SqlParameter("@SliderBannerID", SliderBannerID),
@@ -207,6 +240,7 @@ namespace PoliticalWebsite.Models
             SqlParameter[] para = {
                     new SqlParameter("@EventID", EventID),
                     new SqlParameter("@EventImage", Event),
+                    new SqlParameter("@EventHeading", EventHeading),
                     new SqlParameter("@Discription", Discription),
                      new SqlParameter("@City", City),
                     new SqlParameter("@Town_Village", Town_Village),

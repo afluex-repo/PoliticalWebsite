@@ -200,28 +200,58 @@ namespace PoliticalWebsite.Controllers
         [HttpPost]
         [ActionName("AddSliderBanner")]
         [OnAction(ButtonName = "btnUpdate")]
-        public ActionResult UpdateSliderBannerAction(string Pk_SliderBannerId, HttpPostedFileBase SliderBanner)
+        public ActionResult UpdateSliderBannerAction(
+       string Pk_SliderBannerId,
+       HttpPostedFileBase SliderBanner,
+       string Heading,
+       string Title,
+       string Description,
+       string ButtonText,
+       string ButtonUrl,
+       string FooterText)
         {
             Master obj = new Master();
+
             try
             {
                 obj.SliderBannerID = Pk_SliderBannerId;
-                if (SliderBanner != null)
+
+                // Text fields
+                obj.Heading = Heading;
+                obj.Title = Title;
+                obj.Description = Description;
+                obj.ButtonText = ButtonText;
+                obj.ButtonUrl = ButtonUrl;
+                obj.FooterText = FooterText;
+
+                // Image update only if new image is selected
+                if (SliderBanner != null && SliderBanner.ContentLength > 0)
                 {
-                    obj.SliderBanner = "../BannerImages/" + Guid.NewGuid() + Path.GetExtension(SliderBanner.FileName);
-                    SliderBanner.SaveAs(Path.Combine(Server.MapPath(obj.SliderBanner)));
+                    obj.SliderBanner = "../BannerImages/"
+                                     + Guid.NewGuid()
+                                     + Path.GetExtension(SliderBanner.FileName);
+
+                    SliderBanner.SaveAs(
+                        Path.Combine(Server.MapPath(obj.SliderBanner))
+                    );
                 }
+
                 obj.AddedBy = Session["PK_AdminId"].ToString();
+
                 DataSet ds = obj.UpdateSliderBanner();
-                if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+
+                if (ds != null &&
+                    ds.Tables.Count > 0 &&
+                    ds.Tables[0].Rows.Count > 0)
                 {
-                    if ((ds.Tables[0].Rows[0][0].ToString() == "1"))
+                    if (ds.Tables[0].Rows[0][0].ToString() == "1")
                     {
                         TempData["msg"] = "Slider Banner updated successfully";
                     }
                     else
                     {
-                        TempData["msg"] = ds.Tables[0].Rows[0]["ErrorMessage"].ToString();
+                        TempData["msg"] =
+                            ds.Tables[0].Rows[0]["ErrorMessage"].ToString();
                     }
                 }
             }
@@ -229,6 +259,7 @@ namespace PoliticalWebsite.Controllers
             {
                 TempData["msg"] = ex.Message;
             }
+
             return RedirectToAction("AddSliderBanner", "Master");
         }
 
@@ -510,6 +541,7 @@ namespace PoliticalWebsite.Controllers
                     obj.Pk_EventId = r["Pk_EventId"].ToString();
                     obj.EventImage = r["EventImage"].ToString();
                     obj.Discription = r["Discription"].ToString();
+                    obj.EventHeading = r["EventsHeading"].ToString();
                     obj.Date = r["Date"].ToString();
                     obj.City = r["City"].ToString();
                     obj.Town_Village = r["Town_Village"].ToString();
@@ -523,7 +555,7 @@ namespace PoliticalWebsite.Controllers
         [HttpPost]
         [ActionName("AddEvent")]
         [OnAction(ButtonName = "btnUpdate")]
-        public ActionResult UpdateEventAction(string Pk_EventId, HttpPostedFileBase Event, string Discription, string City, string Town_Village, string Date)
+        public ActionResult UpdateEventAction(string Pk_EventId, HttpPostedFileBase Event, string Discription, string EventHeading, string City, string Town_Village, string Date)
         {
             Master obj = new Master();
             try
@@ -535,6 +567,7 @@ namespace PoliticalWebsite.Controllers
                     Event.SaveAs(Path.Combine(Server.MapPath(obj.Event)));
                 }
                 obj.Discription = Discription;
+                obj.EventHeading = EventHeading;
                 obj.City = City;
                 obj.Town_Village = Town_Village;
                 obj.Date = Date;
