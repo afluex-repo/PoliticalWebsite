@@ -387,6 +387,9 @@ namespace PoliticalWebsite.Controllers
             return View(model);
         }
 
+
+
+
         public ActionResult KushahariMahotsav()
         {
             return View();

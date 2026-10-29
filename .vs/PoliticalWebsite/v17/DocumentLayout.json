@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "F:\\SakshiPandey\\MLASCPortal\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0BA5947E-6C76-4B15-BE5F-C4D04FE2518D}|PoliticalWebsite\\PoliticalWebsite.csproj|F:\\SakshiPandey\\MLASCPortal\\politicalwebsite\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0BA5947E-6C76-4B15-BE5F-C4D04FE2518D}|PoliticalWebsite\\PoliticalWebsite.csproj|solutionrelative:politicalwebsite\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0BA5947E-6C76-4B15-BE5F-C4D04FE2518D}|PoliticalWebsite\\PoliticalWebsite.csproj|F:\\SakshiPandey\\MLASCPortal\\politicalwebsite\\views\\master\\sliderbannerlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0BA5947E-6C76-4B15-BE5F-C4D04FE2518D}|PoliticalWebsite\\PoliticalWebsite.csproj|solutionrelative:politicalwebsite\\views\\master\\sliderbannerlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0BA5947E-6C76-4B15-BE5F-C4D04FE2518D}|PoliticalWebsite\\PoliticalWebsite.csproj|f:\\sakshipandey\\mlascportal\\politicalwebsite\\models\\master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0BA5947E-6C76-4B15-BE5F-C4D04FE2518D}|PoliticalWebsite\\PoliticalWebsite.csproj|solutionrelative:politicalwebsite\\models\\master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -21,10 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{0BA5947E-6C76-4B15-BE5F-C4D04FE2518D}|PoliticalWebsite\\PoliticalWebsite.csproj|F:\\SakshiPandey\\MLASCPortal\\politicalwebsite\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0BA5947E-6C76-4B15-BE5F-C4D04FE2518D}|PoliticalWebsite\\PoliticalWebsite.csproj|solutionrelative:politicalwebsite\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0BA5947E-6C76-4B15-BE5F-C4D04FE2518D}|PoliticalWebsite\\PoliticalWebsite.csproj|F:\\SakshiPandey\\MLASCPortal\\politicalwebsite\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0BA5947E-6C76-4B15-BE5F-C4D04FE2518D}|PoliticalWebsite\\PoliticalWebsite.csproj|solutionrelative:politicalwebsite\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0BA5947E-6C76-4B15-BE5F-C4D04FE2518D}|PoliticalWebsite\\PoliticalWebsite.csproj|F:\\SakshiPandey\\MLASCPortal\\politicalwebsite\\views\\home\\contactold.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -87,10 +91,6 @@
       "RelativeMoniker": "D:0:0:{0BA5947E-6C76-4B15-BE5F-C4D04FE2518D}|PoliticalWebsite\\PoliticalWebsite.csproj|solutionrelative:politicalwebsite\\views\\home\\blogdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0BA5947E-6C76-4B15-BE5F-C4D04FE2518D}|PoliticalWebsite\\PoliticalWebsite.csproj|F:\\SakshiPandey\\MLASCPortal\\politicalwebsite\\views\\master\\sliderbannerlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0BA5947E-6C76-4B15-BE5F-C4D04FE2518D}|PoliticalWebsite\\PoliticalWebsite.csproj|solutionrelative:politicalwebsite\\views\\master\\sliderbannerlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0BA5947E-6C76-4B15-BE5F-C4D04FE2518D}|PoliticalWebsite\\PoliticalWebsite.csproj|F:\\SakshiPandey\\MLASCPortal\\politicalwebsite\\assetsnew\\css\\custom.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{0BA5947E-6C76-4B15-BE5F-C4D04FE2518D}|PoliticalWebsite\\PoliticalWebsite.csproj|solutionrelative:politicalwebsite\\assetsnew\\css\\custom.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
@@ -126,7 +126,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 204,
-          "SelectedChildIndex": 31,
+          "SelectedChildIndex": 49,
           "Children": [
             {
               "$type": "Bookmark",
@@ -242,7 +242,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "ChangePassword.cshtml",
               "DocumentMoniker": "F:\\SakshiPandey\\MLASCPortal\\PoliticalWebsite\\Views\\Master\\ChangePassword.cshtml",
               "RelativeDocumentMoniker": "PoliticalWebsite\\Views\\Master\\ChangePassword.cshtml",
@@ -254,7 +254,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "AddGallery.cshtml",
               "DocumentMoniker": "F:\\SakshiPandey\\MLASCPortal\\PoliticalWebsite\\Views\\Master\\AddGallery.cshtml",
               "RelativeDocumentMoniker": "PoliticalWebsite\\Views\\Master\\AddGallery.cshtml",
@@ -266,32 +266,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 1,
               "Title": "SliderBannerList.cshtml",
               "DocumentMoniker": "F:\\SakshiPandey\\MLASCPortal\\PoliticalWebsite\\Views\\Master\\SliderBannerList.cshtml",
               "RelativeDocumentMoniker": "PoliticalWebsite\\Views\\Master\\SliderBannerList.cshtml",
               "ToolTip": "F:\\SakshiPandey\\MLASCPortal\\PoliticalWebsite\\Views\\Master\\SliderBannerList.cshtml",
               "RelativeToolTip": "PoliticalWebsite\\Views\\Master\\SliderBannerList.cshtml",
-              "ViewState": "AgIAABkAAAAAAAAAAMBdwIsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACAAAAAAAAAAAAAAAIsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-09-02T13:07:58.064Z"
+              "WhenOpened": "2026-09-02T13:07:58.064Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Master.cs",
               "DocumentMoniker": "F:\\SakshiPandey\\MLASCPortal\\PoliticalWebsite\\Models\\Master.cs",
               "RelativeDocumentMoniker": "PoliticalWebsite\\Models\\Master.cs",
               "ToolTip": "F:\\SakshiPandey\\MLASCPortal\\PoliticalWebsite\\Models\\Master.cs",
               "RelativeToolTip": "PoliticalWebsite\\Models\\Master.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAEkBAAAAAAAAAAAAAEkBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-02T12:47:31.308Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "AddSliderBanner.cshtml",
               "DocumentMoniker": "F:\\SakshiPandey\\MLASCPortal\\PoliticalWebsite\\Views\\Master\\AddSliderBanner.cshtml",
               "RelativeDocumentMoniker": "PoliticalWebsite\\Views\\Master\\AddSliderBanner.cshtml",
@@ -299,12 +300,11 @@
               "RelativeToolTip": "PoliticalWebsite\\Views\\Master\\AddSliderBanner.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-09-02T12:47:01.053Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-02T12:47:01.053Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Login.cshtml",
               "DocumentMoniker": "F:\\SakshiPandey\\MLASCPortal\\PoliticalWebsite\\Views\\Home\\Login.cshtml",
               "RelativeDocumentMoniker": "PoliticalWebsite\\Views\\Home\\Login.cshtml",
@@ -328,7 +328,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "Connection.cs",
               "DocumentMoniker": "F:\\SakshiPandey\\MLASCPortal\\PoliticalWebsite\\Models\\Connection.cs",
               "RelativeDocumentMoniker": "PoliticalWebsite\\Models\\Connection.cs",
@@ -340,7 +340,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Home.cs",
               "DocumentMoniker": "F:\\SakshiPandey\\MLASCPortal\\PoliticalWebsite\\Models\\Home.cs",
               "RelativeDocumentMoniker": "PoliticalWebsite\\Models\\Home.cs",
@@ -352,7 +352,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "AddNews.cshtml",
               "DocumentMoniker": "F:\\SakshiPandey\\MLASCPortal\\PoliticalWebsite\\Views\\Master\\AddNews.cshtml",
               "RelativeDocumentMoniker": "PoliticalWebsite\\Views\\Master\\AddNews.cshtml",
@@ -364,7 +364,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "MasterController.cs",
               "DocumentMoniker": "F:\\SakshiPandey\\MLASCPortal\\PoliticalWebsite\\Controllers\\MasterController.cs",
               "RelativeDocumentMoniker": "PoliticalWebsite\\Controllers\\MasterController.cs",
@@ -372,7 +372,8 @@
               "RelativeToolTip": "PoliticalWebsite\\Controllers\\MasterController.cs",
               "ViewState": "AgIAAKUBAAAAAAAAAAAIwK4BAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-14T07:42:54.492Z"
+              "WhenOpened": "2026-08-14T07:42:54.492Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -388,7 +389,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "EventDetails.cshtml",
               "DocumentMoniker": "F:\\SakshiPandey\\MLASCPortal\\PoliticalWebsite\\Views\\Home\\EventDetails.cshtml",
               "RelativeDocumentMoniker": "PoliticalWebsite\\Views\\Home\\EventDetails.cshtml",
@@ -400,7 +401,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "AddEvent.cshtml",
               "DocumentMoniker": "F:\\SakshiPandey\\MLASCPortal\\PoliticalWebsite\\Views\\Master\\AddEvent.cshtml",
               "RelativeDocumentMoniker": "PoliticalWebsite\\Views\\Master\\AddEvent.cshtml",
@@ -412,7 +413,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "EventimageList.cshtml",
               "DocumentMoniker": "F:\\SakshiPandey\\MLASCPortal\\PoliticalWebsite\\Views\\Master\\EventimageList.cshtml",
               "RelativeDocumentMoniker": "PoliticalWebsite\\Views\\Master\\EventimageList.cshtml",
@@ -424,7 +425,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Admin.cs",
               "DocumentMoniker": "F:\\SakshiPandey\\MLASCPortal\\PoliticalWebsite\\Models\\Admin.cs",
               "RelativeDocumentMoniker": "PoliticalWebsite\\Models\\Admin.cs",
@@ -436,7 +437,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Index.cshtml",
               "DocumentMoniker": "F:\\SakshiPandey\\MLASCPortal\\PoliticalWebsite\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "PoliticalWebsite\\Views\\Home\\Index.cshtml",
@@ -444,7 +445,8 @@
               "RelativeToolTip": "PoliticalWebsite\\Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAIEAAAAAAAAAAAAEwIgAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-08-11T06:20:41.314Z"
+              "WhenOpened": "2026-08-11T06:20:41.314Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -472,7 +474,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "NewsPressRelease.cshtml",
               "DocumentMoniker": "F:\\SakshiPandey\\MLASCPortal\\PoliticalWebsite\\Views\\Home\\NewsPressRelease.cshtml",
               "RelativeDocumentMoniker": "PoliticalWebsite\\Views\\Home\\NewsPressRelease.cshtml",
@@ -484,7 +486,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "ContactOld.cshtml",
               "DocumentMoniker": "F:\\SakshiPandey\\MLASCPortal\\PoliticalWebsite\\Views\\Home\\ContactOld.cshtml",
               "RelativeDocumentMoniker": "PoliticalWebsite\\Views\\Home\\ContactOld.cshtml",
@@ -496,19 +498,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "HomeController.cs",
               "DocumentMoniker": "F:\\SakshiPandey\\MLASCPortal\\PoliticalWebsite\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "PoliticalWebsite\\Controllers\\HomeController.cs",
               "ToolTip": "F:\\SakshiPandey\\MLASCPortal\\PoliticalWebsite\\Controllers\\HomeController.cs",
               "RelativeToolTip": "PoliticalWebsite\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAANUAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAABsBAAAAAAAAAAAowIwBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-31T05:02:41.471Z"
+              "WhenOpened": "2025-12-31T05:02:41.471Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "WebsiteLayout.cshtml",
               "DocumentMoniker": "F:\\SakshiPandey\\MLASCPortal\\PoliticalWebsite\\Views\\Shared\\WebsiteLayout.cshtml",
               "RelativeDocumentMoniker": "PoliticalWebsite\\Views\\Shared\\WebsiteLayout.cshtml",
@@ -516,11 +519,12 @@
               "RelativeToolTip": "PoliticalWebsite\\Views\\Shared\\WebsiteLayout.cshtml",
               "ViewState": "AgIAAG4AAAAAAAAAAAAqwIQAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-08-11T09:50:12.039Z"
+              "WhenOpened": "2026-08-11T09:50:12.039Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "Events.cshtml",
               "DocumentMoniker": "F:\\SakshiPandey\\MLASCPortal\\PoliticalWebsite\\Views\\Home\\Events.cshtml",
               "RelativeDocumentMoniker": "PoliticalWebsite\\Views\\Home\\Events.cshtml",
@@ -568,7 +572,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "BlogDetails.cshtml",
               "DocumentMoniker": "F:\\SakshiPandey\\MLASCPortal\\PoliticalWebsite\\Views\\Home\\BlogDetails.cshtml",
               "RelativeDocumentMoniker": "PoliticalWebsite\\Views\\Home\\BlogDetails.cshtml",
@@ -580,7 +584,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "AdminController.cs",
               "DocumentMoniker": "F:\\SakshiPandey\\MLASCPortal\\PoliticalWebsite\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "PoliticalWebsite\\Controllers\\AdminController.cs",
