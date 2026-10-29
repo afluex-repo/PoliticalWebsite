@@ -314,7 +314,7 @@ namespace PoliticalWebsite.Controllers
         //            ViewBag.MainDiscription = r["Discription"].ToString();
         //            ViewBag.MainMessage = r["Message"].ToString();
         //            ViewBag.MainDate = r["Date"].ToString();
-        //            ViewBag.MainMonth = r["Month"].ToString();
+        //            ViewBag.MainMonth = r["Month"].ToString(); 
         //            ViewBag.MainDay = r["Day"].ToString();
         //            lst.Add(obj);
         //        }
