@@ -2200,7 +2200,7 @@ header.main-header .header-sticky.active{
 .footer-copyright{
 	background-color: var(--accent-color);
 	padding: 10px 0;
-	margin-top: 80px;
+/*	margin-top: 80px;*/
 }
 
 .copyright-text{
@@ -7996,3 +7996,329 @@ Responsive
         max-width: 20%;
     }
 } 
+/*footer visits start */
+
+=====================================
+From: Devendra Sir (DEVENDRAGAUTAM/192.168.1.3/u-<2af86bbb323027af>)
+at Wed Sep 02 18:45:11 2026
+-------------------------------------
+/* =========================================================
+   SOCIAL MEDIA SECTION
+   ========================================================= */
+.sc-social-media-section {
+    position: relative;
+    width: 100%;
+    padding: 55px 0 65px;
+    overflow: hidden;
+}
+
+
+/* -----------------------------------------
+   Heading
+----------------------------------------- */
+
+.sc-social-media-section .sc-social-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 35px;
+}
+
+    .sc-social-media-section .sc-social-heading h3 {
+        margin: 0;
+        color: #ffffff;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 1.3;
+        text-align: center;
+        text-transform: capitalize !important;
+    }
+
+.sc-social-media-section .sc-social-heading-line {
+    width: 55px;
+    height: 2px;
+    display: block;
+    background: linear-gradient( 90deg, transparent, rgba(255, 255, 255, 0.8) );
+}
+
+    .sc-social-media-section .sc-social-heading-line:last-child {
+        background: linear-gradient( 90deg, rgba(255, 255, 255, 0.8), transparent );
+    }
+
+
+/* -----------------------------------------
+   Main Card
+----------------------------------------- */
+
+.sc-social-media-section .sc-social-card {
+    position: relative;
+    width: 100%;
+    height: 680px;
+    padding: 12px;
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18), 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+    .sc-social-media-section .sc-social-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 45px rgba(0, 0, 0, 0.24), 0 5px 12px rgba(0, 0, 0, 0.10);
+    }
+
+
+/* -----------------------------------------
+   Card Header
+----------------------------------------- */
+
+.sc-social-media-section .sc-social-card-header {
+    height: 58px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 5px 8px 10px;
+    background: #ffffff;
+}
+
+    .sc-social-media-section .sc-social-card-header h4 {
+        margin: 0;
+        color: #161616;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+
+    .sc-social-media-section .sc-social-card-header p {
+        margin: 3px 0 0;
+        color: #777777;
+        font-size: 12px;
+        line-height: 1.2;
+    }
+
+
+/* -----------------------------------------
+   Social Icon
+----------------------------------------- */
+
+.sc-social-media-section .sc-social-icon {
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.sc-social-media-section .sc-facebook-icon {
+    color: #1877f2;
+    background: rgba(24, 119, 242, 0.10);
+}
+
+.sc-social-media-section .sc-x-icon {
+    color: #111111;
+    background: #f2f2f2;
+}
+
+
+/* -----------------------------------------
+   Feed Area
+----------------------------------------- */
+
+.sc-social-media-section .sc-social-feed {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 58px);
+    overflow: hidden;
+    border-radius: 10px;
+    background: #ffffff;
+}
+
+
+/* -----------------------------------------
+   Facebook Feed
+----------------------------------------- */
+
+.sc-social-media-section .sc-facebook-feed iframe {
+    display: block;
+    width: 100%;
+    height: 600px;
+    max-width: 100%;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* -----------------------------------------
+   X / Twitter Feed
+----------------------------------------- */
+
+.sc-social-media-section .sc-x-feed {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+}
+
+    .sc-social-media-section .sc-x-feed::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .sc-social-media-section .sc-x-feed::-webkit-scrollbar-track {
+        background: #f5f5f5;
+    }
+
+    .sc-social-media-section .sc-x-feed::-webkit-scrollbar-thumb {
+        background: #cccccc;
+        border-radius: 10px;
+    }
+
+
+    /* Poper Generated Content */
+
+    .sc-social-media-section .sc-x-feed .poper-13165 {
+        width: 100%;
+        max-width: 500px;
+        min-height: 600px;
+        margin: 0 auto;
+    }
+
+
+    /* -----------------------------------------
+   Prevent Poper Overflow
+----------------------------------------- */
+
+    .sc-social-media-section .sc-x-feed iframe {
+        max-width: 100% !important;
+    }
+
+    .sc-social-media-section .sc-x-feed > div {
+        max-width: 100%;
+    }
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .sc-social-media-section {
+        padding: 45px 0 55px;
+    }
+
+        .sc-social-media-section .sc-social-heading {
+            margin-bottom: 28px;
+        }
+
+            .sc-social-media-section .sc-social-heading h3 {
+                font-size: 25px;
+            }
+
+        .sc-social-media-section .sc-social-card {
+            height: 660px;
+        }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .sc-social-media-section {
+        padding: 35px 0 45px;
+    }
+
+        .sc-social-media-section .sc-social-heading {
+            gap: 10px;
+            margin-bottom: 22px;
+        }
+
+            .sc-social-media-section .sc-social-heading h3 {
+                font-size: 22px;
+            }
+
+        .sc-social-media-section .sc-social-heading-line {
+            width: 30px;
+        }
+
+        .sc-social-media-section .sc-social-card {
+            height: 630px;
+            padding: 8px;
+            border-radius: 13px;
+        }
+
+        .sc-social-media-section .sc-social-card-header {
+            height: 55px;
+            padding: 4px 7px 9px;
+        }
+
+        .sc-social-media-section .sc-social-icon {
+            width: 37px;
+            height: 37px;
+            flex-basis: 37px;
+            font-size: 18px;
+            border-radius: 9px;
+        }
+
+        .sc-social-media-section .sc-social-card-header h4 {
+            font-size: 15px;
+        }
+
+        .sc-social-media-section .sc-social-card-header p {
+            font-size: 11px;
+        }
+
+        .sc-social-media-section .sc-social-feed {
+            height: calc(100% - 55px);
+        }
+
+        .sc-social-media-section .sc-facebook-feed iframe {
+            height: 570px;
+        }
+
+        .sc-social-media-section .sc-x-feed .poper-13165 {
+            min-height: 570px;
+        }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .sc-social-media-section {
+        padding: 30px 0 40px;
+    }
+
+        .sc-social-media-section .sc-social-heading h3 {
+            font-size: 20px;
+        }
+
+        .sc-social-media-section .sc-social-card {
+            height: 610px;
+            padding: 7px;
+            border-radius: 12px;
+        }
+
+        .sc-social-media-section .sc-facebook-feed iframe {
+            height: 550px;
+        }
+
+        .sc-social-media-section .sc-x-feed .poper-13165 {
+            min-height: 550px;
+        }
+}
+
+
+/*footer visits End */

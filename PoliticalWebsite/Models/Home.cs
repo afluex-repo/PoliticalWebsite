@@ -26,6 +26,15 @@ namespace PoliticalWebsite.Models
         public string Pk_SliderBannerId { get; set; }
         public string SliderBannerID { get; set; }
         public string SliderBannerImage { get; set; }
+
+
+        // Dynamic Slider Text
+        public string Heading { get; set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public string ButtonText { get; set; }
+        public string ButtonUrl { get; set; }
+        public string FooterText { get; set; }
         public List<Home> lstSliderBanner { get; set; }
         #endregion
 
@@ -33,6 +42,7 @@ namespace PoliticalWebsite.Models
         public List<Home> lstgallery { get; set; }
         public string GalleryImage { get; set; }
         public string Discription { get; set; }
+        public string EventsHeading { get; set; }
         public string Pk_GalleryId { get; set; }
         public string GalleryID { get; set; }
         #endregion
@@ -95,7 +105,7 @@ namespace PoliticalWebsite.Models
             return ds;
         }
 
-        public DataSet SliderBannerList()
+        public DataSet SliderBannerList()       
         {
             SqlParameter[] para = { new SqlParameter("@Pk_SliderBannerId", SliderBannerID) };
             DataSet ds = Connection.ExecuteQuery("SliderBannerDetails", para);

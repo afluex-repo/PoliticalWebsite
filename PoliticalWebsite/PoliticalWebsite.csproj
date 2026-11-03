@@ -1077,6 +1077,7 @@
     <Content Include="Views\Home\NewsPressRelease.cshtml" />
     <Content Include="Views\Home\ContactOld.cshtml" />
     <Content Include="Views\Home\BlogDetails.cshtml" />
+    <Content Include="Views\Home\EventDetails.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

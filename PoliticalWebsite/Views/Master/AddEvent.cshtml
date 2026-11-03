@@ -21,14 +21,22 @@
                             <div class="col-lg-4">
                                 <div class="form-group">
                                     <label>Event Heading <span style="color: red">*</span></label>
-                                    @Html.TextBoxFor(m => m.Discription, new { @placeholder = "Event Heading", @class = "form-control" })
+                                    @Html.TextBoxFor(m => m.EventHeading, new { @placeholder = "Event Heading", @class = "form-control" })
+                                    @Html.HiddenFor(m => m.EventID)
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label>Event Discription <span style="color: red">*</span></label>
+                                    @Html.TextBoxFor(m => m.Discription, new { @placeholder = "Event Discription", @class = "form-control" })
                                     @Html.HiddenFor(m => m.EventID)
                                 </div>
                             </div>
                             <div class="col-lg-4">
                                 <div class="form-group">
                                     <label>Town/Village</label>
-                                    @Html.TextBoxFor(m => m.Town_Village, new { @placeholder = "Town/Village", @class = "form-control"})
+                                    @Html.TextBoxFor(m => m.Town_Village, new { @placeholder = "Town/Village", @class = "form-control" })
                                 </div>
                             </div>
 

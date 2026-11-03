@@ -11,25 +11,35 @@
 
 <!-- Hero Section Start -->
 <div class="hero hero-video hero-slider-layout">
+
     <div class="swiper">
+
         <div class="swiper-wrapper">
-            @if (Model.lstSliderBanner != null && Model.lstSliderBanner.Count > 0)
+
+            @if (Model.lstSliderBanner != null &&
+                 Model.lstSliderBanner.Count > 0)
             {
                 foreach (var item in Model.lstSliderBanner)
                 {
                     <!-- Hero Slide Start -->
                     <div class="swiper-slide">
+
                         <div class="hero-slide">
 
                             <!-- Slider Image Start -->
                             <div class="hero-slider-image">
-                                <img src="@Url.Content(item.SliderBannerImage)"
-                                     alt="Slider Banner">
+
+                                <img src="@Url.Content("~/images/" + item.SliderBannerImage)"
+                                     alt="@item.Heading">
+
                             </div>
                             <!-- Slider Image End -->
 
+
                             <div class="container">
+
                                 <div class="row align-items-center">
+
                                     <div class="col-lg-7">
 
                                         <!-- Hero Content Start -->
@@ -37,54 +47,77 @@
 
                                             <!-- Section Title Start -->
                                             <div class="section-title dark-section">
-                                                <h3 class="wow fadeInUp">
-                                                    सुरेन्द्र चौरसिया
-                                                </h3>
 
-                                                <h1 class="text-anime-style-2"
-                                                    data-cursor="-opaque">
-                                                    मिलकर बनाएंगे एक <span>मजबूत भविष्य</span>
-                                                </h1>
+                                                @if (!string.IsNullOrEmpty(item.Heading))
+                                                {
+                                                    <h3 class="wow fadeInUp">
+                                                        @item.Heading
+                                                    </h3>
+                                                }
 
-                                                <p class="wow fadeInUp"
-                                                   data-wow-delay="0.2s">
-                                                    हमारे अभियान के केंद्र में जनता की सेवा का संकल्प है।
-                                                    हमारे आंदोलन में शामिल होकर, आप सकारात्मक बदलाव लाने,
-                                                    आम भलाई के लिए नीतियों को आकार देने और हमारे समुदाय
-                                                    के लिए एक उज्जवल कल बनाने का हिस्सा बनेंगे।
-                                                </p>
+                                                @if (!string.IsNullOrEmpty(item.Title))
+                                                {
+                                                    <h1 class="text-anime-style-2"
+                                                        data-cursor="-opaque">
+
+                                                        @item.Title
+
+                                                    </h1>
+                                                }
+
+                                                @if (!string.IsNullOrEmpty(item.Description))
+                                                {
+                                                    <p class="wow fadeInUp"
+                                                       data-wow-delay="0.2s">
+
+                                                        @item.Description
+
+                                                    </p>
+                                                }
+
                                             </div>
                                             <!-- Section Title End -->
                                             <!-- Hero Body Start -->
-                                            <div class="hero-body wow fadeInUp"
-                                                 data-wow-delay="0.4s">
+                                            @if (!string.IsNullOrEmpty(item.ButtonText))
+                                            {
+                                                <div class="hero-body wow fadeInUp"
+                                                     data-wow-delay="0.4s">
 
-                                                <a href="/Home/Contact"
-                                                   class="btn-default btn-highlighted">
-                                                    अभियान में शामिल हों
-                                                </a>
+                                                    <a href="@item.ButtonUrl"
+                                                       class="btn-default btn-highlighted">
 
-                                            </div>
+                                                        @item.ButtonText
+
+                                                    </a>
+
+                                                </div>
+                                            }
                                             <!-- Hero Body End -->
                                             <!-- Hero Footer Start -->
-                                            <div class="hero-footer wow fadeInUp"
-                                                 data-wow-delay="0.6s">
+                                            @if (!string.IsNullOrEmpty(item.FooterText))
+                                            {
+                                                <div class="hero-footer wow fadeInUp"
+                                                     data-wow-delay="0.6s">
 
-                                                <p>
-                                                    "आपकी आवाज मायने रखती है। आइए, मिलकर बदलाव लाएं।"
-                                                </p>
+                                                    <p>
+                                                        @item.FooterText
+                                                    </p>
 
-                                            </div>
+                                                </div>
+                                            }
                                             <!-- Hero Footer End -->
 
                                         </div>
                                         <!-- Hero Content End -->
 
                                     </div>
+
                                 </div>
+
                             </div>
 
                         </div>
+
                     </div>
                     <!-- Hero Slide End -->
                 }
@@ -92,12 +125,11 @@
 
         </div>
 
+        <div class="hero-pagination"></div>
 
     </div>
-    <div class="hero-pagination"></div>
+
 </div>
-
-
 <!-- Hero Section End -->
 <!-- About Us Section Start -->
 <div class="about-us">
@@ -902,9 +934,9 @@
                                         </a>
                                     </h2>
 
-                                    <p>
+                                    @*<p>
                                         @item.Message
-                                    </p>
+                                    </p>*@
 
                                     @*<small>
                                             @item.Date @item.Year
@@ -917,8 +949,8 @@
                                 <div class="blog-item-btn">
 
                                     @*<a href="/Home/BlogDetails" class="readmore-btn">
-            और पढ़ें
-        </a>*@
+                                            और पढ़ें
+                                        </a>*@
                                     <a href="@Url.Action("BlogDetails", "Home", new { id = item.Pk_NewsId })"
                                        class="blog-read-more">
 

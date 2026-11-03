@@ -53,13 +53,17 @@
 
             @if (Model.lstNews != null && Model.lstNews.Count > 0)
             {
+                int newsCount = 0;
+
                 foreach (var item in Model.lstNews)
                 {
+                    newsCount++;
+
                     <div class="col-12">
 
                         <div class="blog-post-card">
 
-                            <div class="row align-items-center">
+                            <div class="row align-items-center @(newsCount % 2 == 0 ? "flex-lg-row-reverse" : "")">
 
                                 <!-- Image -->
                                 <div class="col-lg-3 col-md-4 col-sm-12">
@@ -67,19 +71,10 @@
                                     <div class="blog-image-wrapper">
 
                                         <img src="@item.NewsImage"
-                                             alt="ब्लॉग पोस्ट"
+                                             alt="@item.Discription"
                                              class="blog-image">
 
                                         <div class="blog-date-badge">
-
-                                            @*<span class="date-day">
-                                                @item.Day
-                                            </span>*@
-
-                                            @*<span class="date-month">
-                                                @item.Month
-                                            </span>*@
-
                                         </div>
 
                                         <div class="blog-category-tag">
@@ -115,23 +110,30 @@
                                         <!-- Title -->
                                         <h3 class="blog-title">
 
-                                            <a href="@Url.Action("NewsDetails", "Home", new { id = item.Pk_NewsId })">
+                                            <a href="@Url.Action("BlogDetails", "Home",
+                                        new { id = item.Pk_NewsId })">
+
                                                 @item.Discription
+
                                             </a>
 
                                         </h3>
 
 
                                         <!-- Description -->
-                                        <p class="blog-excerpt">
-                                            @item.Message
-                                        </p>
+                                        @if (!string.IsNullOrEmpty(item.Message))
+                                        {
+                                            <p class="blog-excerpt">
+                                                @item.Message
+                                            </p>
+                                        }
 
 
                                         <!-- Footer -->
                                         <div class="blog-footer">
 
-                                            <a href="@Url.Action("BlogDetails", "Home", new { id = item.Pk_NewsId })"
+                                            <a href="@Url.Action("BlogDetails", "Home",
+                                        new { id = item.Pk_NewsId })"
                                                class="blog-read-more">
 
                                                 <span>और पढ़ें</span>
@@ -160,6 +162,21 @@
 
                     </div>
                 }
+
+
+                <!-- View All -->
+                <div class="col-12 text-center">
+
+                    <a href="@Url.Action("NewsPressRelease", "Home")"
+                       class="blog-view-all">
+
+                        <span>सभी ब्लॉग देखें</span>
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
             }
             else
             {
@@ -171,21 +188,6 @@
 
                 </div>
             }
-
-
-            <!-- View All -->
-            <div class="col-12 text-center">
-
-                <a href="@Url.Action("NewsPressRelease", "Home")"
-                   class="blog-view-all">
-
-                    <span>सभी ब्लॉग देखें</span>
-
-                    <i class="fas fa-arrow-right"></i>
-
-                </a>
-
-            </div>
 
         </div>
 
