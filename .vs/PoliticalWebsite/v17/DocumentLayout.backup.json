@@ -150,18 +150,6 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Master.cs",
-              "DocumentMoniker": "E:\\Devendra2025\\NewSurendra2026\\PoliticalWebsite\\PoliticalWebsite\\Models\\Master.cs",
-              "RelativeDocumentMoniker": "PoliticalWebsite\\Models\\Master.cs",
-              "ToolTip": "E:\\Devendra2025\\NewSurendra2026\\PoliticalWebsite\\PoliticalWebsite\\Models\\Master.cs",
-              "RelativeToolTip": "PoliticalWebsite\\Models\\Master.cs",
-              "ViewState": "AgIAAEkBAAAAAAAAAAAAAEkBAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-02T12:47:31.308Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 11,
               "Title": "AddSliderBanner.cshtml",
               "DocumentMoniker": "E:\\Devendra2025\\NewSurendra2026\\PoliticalWebsite\\PoliticalWebsite\\Views\\Master\\AddSliderBanner.cshtml",
@@ -246,16 +234,40 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "custom.css",
+              "DocumentMoniker": "E:\\Devendra2025\\NewSurendra2026\\PoliticalWebsite\\PoliticalWebsite\\AssetsNew\\css\\custom.css",
+              "RelativeDocumentMoniker": "PoliticalWebsite\\AssetsNew\\css\\custom.css",
+              "ToolTip": "E:\\Devendra2025\\NewSurendra2026\\PoliticalWebsite\\PoliticalWebsite\\AssetsNew\\css\\custom.css",
+              "RelativeToolTip": "PoliticalWebsite\\AssetsNew\\css\\custom.css",
+              "ViewState": "AgIAAGcgAAAAAAAAAAAqwHkgAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-09-02T13:17:35.48Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "HomeController.cs",
               "DocumentMoniker": "E:\\Devendra2025\\NewSurendra2026\\PoliticalWebsite\\PoliticalWebsite\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "PoliticalWebsite\\Controllers\\HomeController.cs",
               "ToolTip": "E:\\Devendra2025\\NewSurendra2026\\PoliticalWebsite\\PoliticalWebsite\\Controllers\\HomeController.cs",
               "RelativeToolTip": "PoliticalWebsite\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAABsBAAAAAAAAAAAowIwBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAcBAAAAAAAAAAAiwBMBAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-31T05:02:41.471Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Master.cs",
+              "DocumentMoniker": "E:\\Devendra2025\\NewSurendra2026\\PoliticalWebsite\\PoliticalWebsite\\Models\\Master.cs",
+              "RelativeDocumentMoniker": "PoliticalWebsite\\Models\\Master.cs",
+              "ToolTip": "E:\\Devendra2025\\NewSurendra2026\\PoliticalWebsite\\PoliticalWebsite\\Models\\Master.cs",
+              "RelativeToolTip": "PoliticalWebsite\\Models\\Master.cs",
+              "ViewState": "AgIAAEkBAAAAAAAAAAAAAEkBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-02T12:47:31.308Z"
             },
             {
               "$type": "Document",
@@ -292,18 +304,6 @@
               "ViewState": "AgIAAAoAAAAAAAAAAAAUwA0AAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-09-09T07:44:37.971Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "custom.css",
-              "DocumentMoniker": "E:\\Devendra2025\\NewSurendra2026\\PoliticalWebsite\\PoliticalWebsite\\AssetsNew\\css\\custom.css",
-              "RelativeDocumentMoniker": "PoliticalWebsite\\AssetsNew\\css\\custom.css",
-              "ToolTip": "E:\\Devendra2025\\NewSurendra2026\\PoliticalWebsite\\PoliticalWebsite\\AssetsNew\\css\\custom.css",
-              "RelativeToolTip": "PoliticalWebsite\\AssetsNew\\css\\custom.css",
-              "ViewState": "AgIAAGcgAAAAAAAAAAAqwHkgAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-09-02T13:17:35.48Z"
             },
             {
               "$type": "Document",
