@@ -8322,3 +8322,491 @@ at Wed Sep 02 18:45:11 2026
 
 
 /*footer visits End */
+
+/* ==========================================
+   RAMPUR KARHANA CAMPAIGN SECTION
+   Scoped CSS - Only This Section
+========================================== */
+
+.ram-campaign-section {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+    .ram-campaign-section .campaign-list {
+        width: 100%;
+    }
+
+    .ram-campaign-section .campaign-item {
+        min-width: 0;
+    }
+
+    .ram-campaign-section .campaign-content {
+        min-width: 0;
+    }
+
+    /* ==========================================
+   CAMPAIGN ICON BOX
+========================================== */
+
+    .ram-campaign-section .campaign-icon {
+        width: 58px;
+        height: 58px;
+        min-width: 58px;
+        flex: 0 0 58px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #fff7f1;
+        border: 1px solid rgba(238, 105, 32, 0.20);
+        border-radius: 14px;
+        transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+        overflow: visible;
+    }
+
+        /* SVG */
+        .ram-campaign-section .campaign-icon svg {
+            width: 34px;
+            height: 34px;
+            display: block;
+            flex-shrink: 0;
+            overflow: visible;
+        }
+
+            /* ==========================================
+   LOGO COLOR COMBINATION
+========================================== */
+
+            /* Orange */
+            .ram-campaign-section .campaign-icon svg .icon-orange {
+                stroke: #EE6920 !important;
+            }
+
+            /* Green */
+            .ram-campaign-section .campaign-icon svg .icon-green {
+                stroke: #00A859 !important;
+            }
+
+            /* Black */
+            .ram-campaign-section .campaign-icon svg .icon-black {
+                stroke: #111111 !important;
+            }
+
+    /* ==========================================
+   CAMPAIGN CONTENT
+========================================== */
+
+    .ram-campaign-section .campaign-content-info {
+        flex: 1;
+        min-width: 0;
+    }
+
+        .ram-campaign-section .campaign-content-info h3 {
+            overflow-wrap: break-word;
+        }
+
+        .ram-campaign-section .campaign-content-info p {
+            overflow-wrap: break-word;
+            word-break: normal;
+        }
+
+    /* ==========================================
+   HOVER EFFECT
+========================================== */
+
+    .ram-campaign-section .campaign-item:hover .campaign-icon {
+        background: #ffffff !important;
+        border-color: #EE6920 !important;
+        transform: translateY(-3px);
+    }
+
+        /* Keep Original SVG Colors During Hover */
+        .ram-campaign-section .campaign-item:hover .campaign-icon svg .icon-orange {
+            stroke: #EE6920 !important;
+        }
+
+        .ram-campaign-section .campaign-item:hover .campaign-icon svg .icon-green {
+            stroke: #00A859 !important;
+        }
+
+        .ram-campaign-section .campaign-item:hover .campaign-icon svg .icon-black {
+            stroke: #111111 !important;
+        }
+
+    /* ==========================================
+   ACTIVE ITEM
+========================================== */
+
+    .ram-campaign-section .campaign-item.active .campaign-icon {
+        background: #fff3e9 !important;
+        border-color: #EE6920 !important;
+    }
+
+        .ram-campaign-section .campaign-item.active .campaign-icon svg .icon-orange {
+            stroke: #EE6920 !important;
+        }
+
+        .ram-campaign-section .campaign-item.active .campaign-icon svg .icon-green {
+            stroke: #00A859 !important;
+        }
+
+        .ram-campaign-section .campaign-item.active .campaign-icon svg .icon-black {
+            stroke: #111111 !important;
+        }
+
+/* ==========================================
+   TABLET RESPONSIVE
+========================================== */
+
+@media (max-width: 991px) {
+
+    .ram-campaign-section {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+        .ram-campaign-section .campaign-icon {
+            width: 54px;
+            height: 54px;
+            min-width: 54px;
+            flex-basis: 54px;
+        }
+
+            .ram-campaign-section .campaign-icon svg {
+                width: 32px;
+                height: 32px;
+            }
+}
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 767px) {
+
+    .ram-campaign-section .campaign-item {
+        min-width: 0;
+    }
+
+    .ram-campaign-section .campaign-content {
+        gap: 14px;
+        align-items: flex-start;
+    }
+
+    .ram-campaign-section .campaign-icon {
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
+        flex-basis: 48px;
+        border-radius: 12px;
+    }
+
+        .ram-campaign-section .campaign-icon svg {
+            width: 29px;
+            height: 29px;
+        }
+
+    .ram-campaign-section .campaign-content-info {
+        flex: 1;
+        min-width: 0;
+    }
+
+        .ram-campaign-section .campaign-content-info h3 {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 8px;
+        }
+
+        .ram-campaign-section .campaign-content-info p {
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+
+    .ram-campaign-section .campaign-content {
+        gap: 11px;
+    }
+
+    .ram-campaign-section .campaign-icon {
+        width: 43px;
+        height: 43px;
+        min-width: 43px;
+        flex-basis: 43px;
+        border-radius: 10px;
+    }
+
+        .ram-campaign-section .campaign-icon svg {
+            width: 26px;
+            height: 26px;
+        }
+
+    .ram-campaign-section .campaign-content-info h3 {
+        font-size: 16px;
+        line-height: 1.45;
+    }
+
+    .ram-campaign-section .campaign-content-info p {
+        font-size: 13px;
+        line-height: 1.65;
+    }
+}
+
+/* ==========================================
+   EXTRA SMALL DEVICES
+========================================== */
+
+@media (max-width: 360px) {
+
+    .ram-campaign-section .campaign-content {
+        gap: 9px;
+    }
+
+    .ram-campaign-section .campaign-icon {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        flex-basis: 40px;
+    }
+
+        .ram-campaign-section .campaign-icon svg {
+            width: 24px;
+            height: 24px;
+        }
+
+    .ram-campaign-section .campaign-content-info h3 {
+        font-size: 15px;
+    }
+
+    .ram-campaign-section .campaign-content-info p {
+        font-size: 12px;
+    }
+}
+
+
+/* ==========================================
+   CUSTOM ACHIEVEMENT SECTION
+========================================== */
+
+#customAchievementSection {
+    width: 100%;
+    position: relative;
+}
+
+    /* Achievement List Item */
+    #customAchievementSection .achievement-list-item {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        position: relative;
+    }
+
+    /* Achievement Content */
+    #customAchievementSection .achievement-item {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex: 1;
+        min-width: 0;
+    }
+
+    /* Icon Box */
+    #customAchievementSection .icon-box {
+        width: 65px;
+        height: 65px;
+        flex: 0 0 65px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+        /* SVG Icons */
+        #customAchievementSection .icon-box svg {
+            width: 55px;
+            height: 55px;
+            display: block;
+            color: #294129;
+            overflow: visible;
+        }
+
+            /* SVG Stroke Color */
+            #customAchievementSection .icon-box svg path,
+            #customAchievementSection .icon-box svg circle,
+            #customAchievementSection .icon-box svg line,
+            #customAchievementSection .icon-box svg polyline,
+            #customAchievementSection .icon-box svg polygon,
+            #customAchievementSection .icon-box svg ellipse {
+                stroke: #294129 !important;
+            }
+
+                /* SVG Filled Elements */
+                #customAchievementSection .icon-box svg circle[fill="#ffffff"],
+                #customAchievementSection .icon-box svg path[fill="#ffffff"] {
+                    fill: #294129 !important;
+                }
+
+    /* Achievement Text */
+    #customAchievementSection .achievement-item-content {
+        flex: 1;
+        min-width: 0;
+    }
+
+        #customAchievementSection .achievement-item-content p {
+            margin: 0;
+            line-height: 1.7;
+            color: #333333;
+            font-size: 15px;
+        }
+
+    /* Achievement Button */
+    #customAchievementSection .achievement-button {
+        width: 42px;
+        height: 42px;
+        flex: 0 0 42px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+        #customAchievementSection .achievement-button a {
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        /* Arrow SVG */
+        #customAchievementSection .achievement-button svg {
+            width: 22px;
+            height: 22px;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+            #customAchievementSection .achievement-button svg path {
+                stroke: #294129 !important;
+            }
+
+        /* Button Hover */
+        #customAchievementSection .achievement-button a:hover {
+            background: #294129;
+        }
+
+            #customAchievementSection .achievement-button a:hover svg {
+                transform: translateX(4px);
+            }
+
+                #customAchievementSection .achievement-button a:hover svg path {
+                    stroke: #ffffff !important;
+                }
+
+/* ==========================================
+   TABLET RESPONSIVE
+========================================== */
+
+@media (max-width: 991px) {
+
+    #customAchievementSection .achievement-list-item {
+        gap: 15px;
+    }
+
+    #customAchievementSection .achievement-item {
+        gap: 15px;
+    }
+
+    #customAchievementSection .icon-box {
+        width: 55px;
+        height: 55px;
+        flex: 0 0 55px;
+    }
+
+        #customAchievementSection .icon-box svg {
+            width: 48px;
+            height: 48px;
+        }
+}
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width: 575px) {
+
+    #customAchievementSection .achievement-list-item {
+        gap: 8px;
+    }
+
+    #customAchievementSection .achievement-item {
+        gap: 12px;
+    }
+
+    #customAchievementSection .icon-box {
+        width: 45px;
+        height: 45px;
+        flex: 0 0 45px;
+    }
+
+        #customAchievementSection .icon-box svg {
+            width: 40px;
+            height: 40px;
+        }
+
+    #customAchievementSection .achievement-item-content p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    #customAchievementSection .achievement-button {
+        width: 32px;
+        height: 32px;
+        flex: 0 0 32px;
+    }
+
+        #customAchievementSection .achievement-button a {
+            width: 32px;
+            height: 32px;
+        }
+
+        #customAchievementSection .achievement-button svg {
+            width: 19px;
+            height: 19px;
+        }
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 380px) {
+
+    #customAchievementSection .achievement-item {
+        gap: 8px;
+    }
+
+    #customAchievementSection .icon-box {
+        width: 38px;
+        height: 38px;
+        flex: 0 0 38px;
+    }
+
+        #customAchievementSection .icon-box svg {
+            width: 34px;
+            height: 34px;
+        }
+
+    #customAchievementSection .achievement-item-content p {
+        font-size: 13px;
+    }
+}
